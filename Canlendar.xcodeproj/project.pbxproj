@@ -1,0 +1,706 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8FF9B86C13D0F1B900D1F44D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FF9B86B13D0F1B900D1F44D /* UIKit.framework */; };
+		8FF9B86E13D0F1B900D1F44D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FF9B86D13D0F1B900D1F44D /* Foundation.framework */; };
+		8FF9B87013D0F1B900D1F44D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FF9B86F13D0F1B900D1F44D /* CoreGraphics.framework */; };
+		8FF9B87613D0F1B900D1F44D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8FF9B87413D0F1B900D1F44D /* InfoPlist.strings */; };
+		8FF9B87913D0F1B900D1F44D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FF9B87813D0F1B900D1F44D /* main.m */; };
+		8FF9B87F13D0F1B900D1F44D /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FF9B87D13D0F1B900D1F44D /* MainWindow.xib */; };
+		D50A3ED71675E4FC0097AC4E /* mainbackground.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D50A3ED61675E4FC0097AC4E /* mainbackground.jpg */; };
+		D50A77B616AFC2CB00717F2C /* libUMFeedback.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D50A77B316AFC2CB00717F2C /* libUMFeedback.a */; };
+		D50A77B716AFC2CB00717F2C /* umFeedback.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D50A77B416AFC2CB00717F2C /* umFeedback.bundle */; };
+		D50A77C416AFE9DE00717F2C /* todosanjiao.png in Resources */ = {isa = PBXBuildFile; fileRef = D50A77C316AFE9DE00717F2C /* todosanjiao.png */; };
+		D50F7014169BF31900E3C72C /* libMobClickLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D50F7012169BF31900E3C72C /* libMobClickLibrary.a */; };
+		D51035EB16A5243F00CF086E /* FinishViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D51035EA16A5243E00CF086E /* FinishViewController.m */; };
+		D51035F016A53C9600CF086E /* AddEventViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D51035EF16A53C9500CF086E /* AddEventViewController.xib */; };
+		D51418B21697C2DE00AC69F4 /* SidebarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D51418B11697C2DE00AC69F4 /* SidebarViewController.m */; };
+		D51418B81697DB8200AC69F4 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D51418B71697DB8200AC69F4 /* MessageUI.framework */; };
+		D525CFAF1671EFDB00DEEC1E /* CanlendarAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D525CFAC1671EFDB00DEEC1E /* CanlendarAppDelegate.m */; };
+		D525CFB01671EFDB00DEEC1E /* CanlendarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D525CFAE1671EFDB00DEEC1E /* CanlendarViewController.m */; };
+		D525CFB91671EFEB00DEEC1E /* TdCalendarView.m in Sources */ = {isa = PBXBuildFile; fileRef = D525CFB61671EFEB00DEEC1E /* TdCalendarView.m */; };
+		D5307D7C1675B98800C73CA3 /* CanlendarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D5307D7B1675B98800C73CA3 /* CanlendarViewController.xib */; };
+		D5330A07165F14DA009C582A /* Cal.m in Sources */ = {isa = PBXBuildFile; fileRef = D5330A06165F14DA009C582A /* Cal.m */; };
+		D53D14611699778500D47197 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D53D14601699778500D47197 /* libz.dylib */; };
+		D543072C16B281E2004A9302 /* daybg.png in Resources */ = {isa = PBXBuildFile; fileRef = D543072716B281E2004A9302 /* daybg.png */; };
+		D543072E16B281E2004A9302 /* todocancelbutton.png in Resources */ = {isa = PBXBuildFile; fileRef = D543072916B281E2004A9302 /* todocancelbutton.png */; };
+		D543072F16B281E2004A9302 /* todofinishbutton.png in Resources */ = {isa = PBXBuildFile; fileRef = D543072A16B281E2004A9302 /* todofinishbutton.png */; };
+		D543073016B281E2004A9302 /* workday.png in Resources */ = {isa = PBXBuildFile; fileRef = D543072B16B281E2004A9302 /* workday.png */; };
+		D543073216B282A5004A9302 /* holiday.png in Resources */ = {isa = PBXBuildFile; fileRef = D543073116B282A5004A9302 /* holiday.png */; };
+		D54A822E16A3D5AC007D81AA /* UITextViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D54A822D16A3D5AC007D81AA /* UITextViewCell.m */; };
+		D54A823216A3DC6C007D81AA /* AdviceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D54A823116A3DC6C007D81AA /* AdviceCell.m */; };
+		D555A0F616A005440080ACC1 /* todobackground_iphone5.png in Resources */ = {isa = PBXBuildFile; fileRef = D555A0F516A005440080ACC1 /* todobackground_iphone5.png */; };
+		D555A0F916A0054D0080ACC1 /* todoaddbutton.png in Resources */ = {isa = PBXBuildFile; fileRef = D555A0F716A0054D0080ACC1 /* todoaddbutton.png */; };
+		D555A0FA16A0054D0080ACC1 /* todobackground_iphone4.png in Resources */ = {isa = PBXBuildFile; fileRef = D555A0F816A0054D0080ACC1 /* todobackground_iphone4.png */; };
+		D555A10116A00F720080ACC1 /* AddEventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D555A10016A00F720080ACC1 /* AddEventViewController.m */; };
+		D55DDD8B16AA74F000E904AF /* FinishViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D55DDD8A16AA74F000E904AF /* FinishViewController.xib */; };
+		D55DDDA816AA963100E904AF /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D55DDDA716AA963100E904AF /* QuartzCore.framework */; };
+		D55DDDB816AA9A8B00E904AF /* AHAlertSampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D55DDDAE16AA9A8B00E904AF /* AHAlertSampleViewController.m */; };
+		D55DDDB916AA9A8B00E904AF /* AHAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = D55DDDB016AA9A8B00E904AF /* AHAlertView.m */; };
+		D55DDDBA16AA9A8B00E904AF /* custom-button-normal.png in Resources */ = {isa = PBXBuildFile; fileRef = D55DDDB216AA9A8B00E904AF /* custom-button-normal.png */; };
+		D55DDDBB16AA9A8B00E904AF /* custom-button-normal@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D55DDDB316AA9A8B00E904AF /* custom-button-normal@2x.png */; };
+		D55DDDBC16AA9A8B00E904AF /* custom-cancel-normal.png in Resources */ = {isa = PBXBuildFile; fileRef = D55DDDB416AA9A8B00E904AF /* custom-cancel-normal.png */; };
+		D55DDDBD16AA9A8B00E904AF /* custom-cancel-normal@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D55DDDB516AA9A8B00E904AF /* custom-cancel-normal@2x.png */; };
+		D55DDDBE16AA9A8B00E904AF /* custom-dialog-background.png in Resources */ = {isa = PBXBuildFile; fileRef = D55DDDB616AA9A8B00E904AF /* custom-dialog-background.png */; };
+		D55DDDBF16AA9A8B00E904AF /* custom-dialog-background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D55DDDB716AA9A8B00E904AF /* custom-dialog-background@2x.png */; };
+		D565724C16A80AC400D4BD2A /* SetAdviceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D565724A16A80AC400D4BD2A /* SetAdviceViewController.m */; };
+		D565724D16A80AC400D4BD2A /* SetAdviceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D565724B16A80AC400D4BD2A /* SetAdviceViewController.xib */; };
+		D565725116A8100500D4BD2A /* AdviceCell_2.m in Sources */ = {isa = PBXBuildFile; fileRef = D565725016A8100400D4BD2A /* AdviceCell_2.m */; };
+		D58E8028169A7E930019244A /* today.png in Resources */ = {isa = PBXBuildFile; fileRef = D58E8027169A7E930019244A /* today.png */; };
+		D5955FC11676EED1002D85B7 /* yearbackground.png in Resources */ = {isa = PBXBuildFile; fileRef = D5955FC01676EED1002D85B7 /* yearbackground.png */; };
+		D59F578C1693E645007CCD90 /* SidebarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D59F578A1693E645007CCD90 /* SidebarViewController.xib */; };
+		D5A1FA28169E4E1300E75594 /* SetupView.m in Sources */ = {isa = PBXBuildFile; fileRef = D5A1FA26169E4E1300E75594 /* SetupView.m */; };
+		D5A1FA29169E4E1300E75594 /* SetupView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D5A1FA27169E4E1300E75594 /* SetupView.xib */; };
+		D5A1FA2C169E4EA900E75594 /* ToDoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D5A1FA2B169E4EA900E75594 /* ToDoViewController.xib */; };
+		D5A1FA32169E6FC100E75594 /* todotablecellbg.png in Resources */ = {isa = PBXBuildFile; fileRef = D5A1FA30169E6FC100E75594 /* todotablecellbg.png */; };
+		D5A1FA36169E7ABE00E75594 /* todocheckbox_normal.png in Resources */ = {isa = PBXBuildFile; fileRef = D5A1FA33169E7ABE00E75594 /* todocheckbox_normal.png */; };
+		D5A1FA37169E7ABE00E75594 /* todocheckbox_select.png in Resources */ = {isa = PBXBuildFile; fileRef = D5A1FA34169E7ABE00E75594 /* todocheckbox_select.png */; };
+		D5A1FA3E169E8A0600E75594 /* ToDoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D5A1FA3D169E8A0600E75594 /* ToDoViewController.m */; };
+		D5A1FA41169E8ECE00E75594 /* FinishButton.m in Sources */ = {isa = PBXBuildFile; fileRef = D5A1FA40169E8ECD00E75594 /* FinishButton.m */; };
+		D5A1FA4A169EC33900E75594 /* kongbai.png in Resources */ = {isa = PBXBuildFile; fileRef = D5A1FA49169EC33900E75594 /* kongbai.png */; };
+		D5A1FA4D169ECA2F00E75594 /* ToDoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D5A1FA4C169ECA2F00E75594 /* ToDoCell.m */; };
+		D5BDB6141677311E00965726 /* showview.png in Resources */ = {isa = PBXBuildFile; fileRef = D5BDB6131677311E00965726 /* showview.png */; };
+		D5C3A3B416994FF6000BB607 /* NewFuctionIntroductionView.m in Sources */ = {isa = PBXBuildFile; fileRef = D5C3A3AF16994FF6000BB607 /* NewFuctionIntroductionView.m */; };
+		D5C3A3B516994FF6000BB607 /* StartView.m in Sources */ = {isa = PBXBuildFile; fileRef = D5C3A3B116994FF6000BB607 /* StartView.m */; };
+		D5C3A3B616994FF6000BB607 /* StartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D5C3A3B316994FF6000BB607 /* StartViewController.m */; };
+		D5C3A3C016995E55000BB607 /* setupbutton.png in Resources */ = {isa = PBXBuildFile; fileRef = D5C3A3BF16995E55000BB607 /* setupbutton.png */; };
+		D5C950D016B61DBB008DA550 /* AboutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D5C950CF16B61DBB008DA550 /* AboutViewController.xib */; };
+		D5C950D616B621AA008DA550 /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D5C950D516B621AA008DA550 /* AboutViewController.m */; };
+		D5C950E516B62DAB008DA550 /* GuomobAdSDKBundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D5C950E316B62DAB008DA550 /* GuomobAdSDKBundle.bundle */; };
+		D5C950E616B62DAB008DA550 /* libGuomobAdSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D5C950E416B62DAB008DA550 /* libGuomobAdSDK.a */; };
+		D5C950E816B62E48008DA550 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5C950E716B62E48008DA550 /* CoreTelephony.framework */; };
+		D5C950EA16B62E54008DA550 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5C950E916B62E54008DA550 /* SystemConfiguration.framework */; };
+		D5C950EC16B62E5C008DA550 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5C950EB16B62E5C008DA550 /* ImageIO.framework */; };
+		D5C950EF16B64A23008DA550 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D5C950ED16B64A23008DA550 /* Default-568h@2x.png */; };
+		D5C950F016B64A23008DA550 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = D5C950EE16B64A23008DA550 /* Default.png */; };
+		D5F9955D169C1E5400B984B8 /* ico_small.png in Resources */ = {isa = PBXBuildFile; fileRef = D5F9955C169C1E5400B984B8 /* ico_small.png */; };
+		D5F9955F169C1EAF00B984B8 /* ico_big.png in Resources */ = {isa = PBXBuildFile; fileRef = D5F9955E169C1EAF00B984B8 /* ico_big.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		8FF9B86713D0F1B900D1F44D /* Canlendar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Canlendar.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8FF9B86B13D0F1B900D1F44D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		8FF9B86D13D0F1B900D1F44D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		8FF9B86F13D0F1B900D1F44D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		8FF9B87313D0F1B900D1F44D /* Canlendar-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Canlendar-Info.plist"; sourceTree = "<group>"; };
+		8FF9B87513D0F1B900D1F44D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		8FF9B87713D0F1B900D1F44D /* Canlendar-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Canlendar-Prefix.pch"; sourceTree = "<group>"; };
+		8FF9B87813D0F1B900D1F44D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		8FF9B87E13D0F1B900D1F44D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
+		D50A3ED61675E4FC0097AC4E /* mainbackground.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = mainbackground.jpg; sourceTree = "<group>"; };
+		D50A77B316AFC2CB00717F2C /* libUMFeedback.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libUMFeedback.a; sourceTree = "<group>"; };
+		D50A77B416AFC2CB00717F2C /* umFeedback.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = umFeedback.bundle; sourceTree = "<group>"; };
+		D50A77B516AFC2CB00717F2C /* UMFeedback.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UMFeedback.h; sourceTree = "<group>"; };
+		D50A77C316AFE9DE00717F2C /* todosanjiao.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = todosanjiao.png; sourceTree = "<group>"; };
+		D50F7012169BF31900E3C72C /* libMobClickLibrary.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libMobClickLibrary.a; sourceTree = "<group>"; };
+		D50F7013169BF31900E3C72C /* MobClick.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MobClick.h; sourceTree = "<group>"; };
+		D51035E916A5243E00CF086E /* FinishViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FinishViewController.h; sourceTree = "<group>"; };
+		D51035EA16A5243E00CF086E /* FinishViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FinishViewController.m; sourceTree = "<group>"; };
+		D51035EF16A53C9500CF086E /* AddEventViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddEventViewController.xib; sourceTree = "<group>"; };
+		D51418B01697C2DE00AC69F4 /* SidebarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SidebarViewController.h; sourceTree = "<group>"; };
+		D51418B11697C2DE00AC69F4 /* SidebarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SidebarViewController.m; sourceTree = "<group>"; };
+		D51418B51697DB5200AC69F4 /* AddressBookUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBookUI.framework; path = System/Library/Frameworks/AddressBookUI.framework; sourceTree = SDKROOT; };
+		D51418B71697DB8200AC69F4 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		D51418C71697F5A600AC69F4 /* Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
+		D525CFAB1671EFDB00DEEC1E /* CanlendarAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CanlendarAppDelegate.h; sourceTree = "<group>"; };
+		D525CFAC1671EFDB00DEEC1E /* CanlendarAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CanlendarAppDelegate.m; sourceTree = "<group>"; };
+		D525CFAD1671EFDB00DEEC1E /* CanlendarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CanlendarViewController.h; sourceTree = "<group>"; };
+		D525CFAE1671EFDB00DEEC1E /* CanlendarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CanlendarViewController.m; sourceTree = "<group>"; };
+		D525CFB51671EFEB00DEEC1E /* TdCalendarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TdCalendarView.h; sourceTree = "<group>"; };
+		D525CFB61671EFEB00DEEC1E /* TdCalendarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TdCalendarView.m; sourceTree = "<group>"; };
+		D5307D7B1675B98800C73CA3 /* CanlendarViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CanlendarViewController.xib; sourceTree = "<group>"; };
+		D5330A05165F14DA009C582A /* Cal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cal.h; sourceTree = "<group>"; };
+		D5330A06165F14DA009C582A /* Cal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Cal.m; sourceTree = "<group>"; };
+		D53D14601699778500D47197 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		D543072716B281E2004A9302 /* daybg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = daybg.png; sourceTree = "<group>"; };
+		D543072916B281E2004A9302 /* todocancelbutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = todocancelbutton.png; sourceTree = "<group>"; };
+		D543072A16B281E2004A9302 /* todofinishbutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = todofinishbutton.png; sourceTree = "<group>"; };
+		D543072B16B281E2004A9302 /* workday.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = workday.png; sourceTree = "<group>"; };
+		D543073116B282A5004A9302 /* holiday.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = holiday.png; sourceTree = "<group>"; };
+		D54A822C16A3D5AC007D81AA /* UITextViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITextViewCell.h; sourceTree = "<group>"; };
+		D54A822D16A3D5AC007D81AA /* UITextViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITextViewCell.m; sourceTree = "<group>"; };
+		D54A823016A3DC6C007D81AA /* AdviceCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdviceCell.h; sourceTree = "<group>"; };
+		D54A823116A3DC6C007D81AA /* AdviceCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdviceCell.m; sourceTree = "<group>"; };
+		D555A0F516A005440080ACC1 /* todobackground_iphone5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = todobackground_iphone5.png; sourceTree = "<group>"; };
+		D555A0F716A0054D0080ACC1 /* todoaddbutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = todoaddbutton.png; sourceTree = "<group>"; };
+		D555A0F816A0054D0080ACC1 /* todobackground_iphone4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = todobackground_iphone4.png; sourceTree = "<group>"; };
+		D555A0FF16A00F720080ACC1 /* AddEventViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddEventViewController.h; sourceTree = "<group>"; };
+		D555A10016A00F720080ACC1 /* AddEventViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddEventViewController.m; sourceTree = "<group>"; };
+		D55DDD8A16AA74F000E904AF /* FinishViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FinishViewController.xib; sourceTree = "<group>"; };
+		D55DDDA716AA963100E904AF /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		D55DDDAD16AA9A8B00E904AF /* AHAlertSampleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AHAlertSampleViewController.h; sourceTree = "<group>"; };
+		D55DDDAE16AA9A8B00E904AF /* AHAlertSampleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AHAlertSampleViewController.m; sourceTree = "<group>"; };
+		D55DDDAF16AA9A8B00E904AF /* AHAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AHAlertView.h; sourceTree = "<group>"; };
+		D55DDDB016AA9A8B00E904AF /* AHAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AHAlertView.m; sourceTree = "<group>"; };
+		D55DDDB216AA9A8B00E904AF /* custom-button-normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "custom-button-normal.png"; sourceTree = "<group>"; };
+		D55DDDB316AA9A8B00E904AF /* custom-button-normal@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "custom-button-normal@2x.png"; sourceTree = "<group>"; };
+		D55DDDB416AA9A8B00E904AF /* custom-cancel-normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "custom-cancel-normal.png"; sourceTree = "<group>"; };
+		D55DDDB516AA9A8B00E904AF /* custom-cancel-normal@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "custom-cancel-normal@2x.png"; sourceTree = "<group>"; };
+		D55DDDB616AA9A8B00E904AF /* custom-dialog-background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "custom-dialog-background.png"; sourceTree = "<group>"; };
+		D55DDDB716AA9A8B00E904AF /* custom-dialog-background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "custom-dialog-background@2x.png"; sourceTree = "<group>"; };
+		D565724916A80AC300D4BD2A /* SetAdviceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetAdviceViewController.h; sourceTree = "<group>"; };
+		D565724A16A80AC400D4BD2A /* SetAdviceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetAdviceViewController.m; sourceTree = "<group>"; };
+		D565724B16A80AC400D4BD2A /* SetAdviceViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SetAdviceViewController.xib; sourceTree = "<group>"; };
+		D565724F16A8100400D4BD2A /* AdviceCell_2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdviceCell_2.h; sourceTree = "<group>"; };
+		D565725016A8100400D4BD2A /* AdviceCell_2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdviceCell_2.m; sourceTree = "<group>"; };
+		D58E8027169A7E930019244A /* today.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = today.png; sourceTree = "<group>"; };
+		D5955FC01676EED1002D85B7 /* yearbackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = yearbackground.png; sourceTree = "<group>"; };
+		D59F57871693E645007CCD90 /* SideBarSelectedDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SideBarSelectedDelegate.h; sourceTree = "<group>"; };
+		D59F578A1693E645007CCD90 /* SidebarViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SidebarViewController.xib; sourceTree = "<group>"; };
+		D5A1FA25169E4E1300E75594 /* SetupView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetupView.h; sourceTree = "<group>"; };
+		D5A1FA26169E4E1300E75594 /* SetupView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetupView.m; sourceTree = "<group>"; };
+		D5A1FA27169E4E1300E75594 /* SetupView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SetupView.xib; sourceTree = "<group>"; };
+		D5A1FA2B169E4EA900E75594 /* ToDoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ToDoViewController.xib; sourceTree = "<group>"; };
+		D5A1FA30169E6FC100E75594 /* todotablecellbg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = todotablecellbg.png; sourceTree = "<group>"; };
+		D5A1FA33169E7ABE00E75594 /* todocheckbox_normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = todocheckbox_normal.png; sourceTree = "<group>"; };
+		D5A1FA34169E7ABE00E75594 /* todocheckbox_select.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = todocheckbox_select.png; sourceTree = "<group>"; };
+		D5A1FA3C169E8A0600E75594 /* ToDoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ToDoViewController.h; sourceTree = "<group>"; };
+		D5A1FA3D169E8A0600E75594 /* ToDoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ToDoViewController.m; sourceTree = "<group>"; };
+		D5A1FA3F169E8ECD00E75594 /* FinishButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FinishButton.h; sourceTree = "<group>"; };
+		D5A1FA40169E8ECD00E75594 /* FinishButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FinishButton.m; sourceTree = "<group>"; };
+		D5A1FA49169EC33900E75594 /* kongbai.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = kongbai.png; sourceTree = "<group>"; };
+		D5A1FA4B169ECA2F00E75594 /* ToDoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ToDoCell.h; sourceTree = "<group>"; };
+		D5A1FA4C169ECA2F00E75594 /* ToDoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ToDoCell.m; sourceTree = "<group>"; };
+		D5BDB6131677311E00965726 /* showview.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = showview.png; sourceTree = "<group>"; };
+		D5C3A3AE16994FF6000BB607 /* NewFuctionIntroductionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewFuctionIntroductionView.h; sourceTree = "<group>"; };
+		D5C3A3AF16994FF6000BB607 /* NewFuctionIntroductionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewFuctionIntroductionView.m; sourceTree = "<group>"; };
+		D5C3A3B016994FF6000BB607 /* StartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StartView.h; sourceTree = "<group>"; };
+		D5C3A3B116994FF6000BB607 /* StartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StartView.m; sourceTree = "<group>"; };
+		D5C3A3B216994FF6000BB607 /* StartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StartViewController.h; sourceTree = "<group>"; };
+		D5C3A3B316994FF6000BB607 /* StartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StartViewController.m; sourceTree = "<group>"; };
+		D5C3A3BF16995E55000BB607 /* setupbutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = setupbutton.png; sourceTree = "<group>"; };
+		D5C950CF16B61DBB008DA550 /* AboutViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AboutViewController.xib; sourceTree = "<group>"; };
+		D5C950D416B621AA008DA550 /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
+		D5C950D516B621AA008DA550 /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
+		D5C950E216B62DAB008DA550 /* GuomobAdSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GuomobAdSDK.h; sourceTree = "<group>"; };
+		D5C950E316B62DAB008DA550 /* GuomobAdSDKBundle.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = GuomobAdSDKBundle.bundle; sourceTree = "<group>"; };
+		D5C950E416B62DAB008DA550 /* libGuomobAdSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libGuomobAdSDK.a; sourceTree = "<group>"; };
+		D5C950E716B62E48008DA550 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		D5C950E916B62E54008DA550 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		D5C950EB16B62E5C008DA550 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
+		D5C950ED16B64A23008DA550 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		D5C950EE16B64A23008DA550 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		D5F98EB016BF912300969FEE /* yongshiyiji.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = yongshiyiji.h; sourceTree = "<group>"; };
+		D5F9955C169C1E5400B984B8 /* ico_small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ico_small.png; sourceTree = "<group>"; };
+		D5F9955E169C1EAF00B984B8 /* ico_big.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ico_big.png; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8FF9B86413D0F1B900D1F44D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D5C950EC16B62E5C008DA550 /* ImageIO.framework in Frameworks */,
+				D5C950EA16B62E54008DA550 /* SystemConfiguration.framework in Frameworks */,
+				D5C950E816B62E48008DA550 /* CoreTelephony.framework in Frameworks */,
+				D55DDDA816AA963100E904AF /* QuartzCore.framework in Frameworks */,
+				D53D14611699778500D47197 /* libz.dylib in Frameworks */,
+				D51418B81697DB8200AC69F4 /* MessageUI.framework in Frameworks */,
+				8FF9B86C13D0F1B900D1F44D /* UIKit.framework in Frameworks */,
+				8FF9B86E13D0F1B900D1F44D /* Foundation.framework in Frameworks */,
+				8FF9B87013D0F1B900D1F44D /* CoreGraphics.framework in Frameworks */,
+				D50F7014169BF31900E3C72C /* libMobClickLibrary.a in Frameworks */,
+				D50A77B616AFC2CB00717F2C /* libUMFeedback.a in Frameworks */,
+				D5C950E616B62DAB008DA550 /* libGuomobAdSDK.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8FF9B85C13D0F1B900D1F44D = {
+			isa = PBXGroup;
+			children = (
+				D5C950ED16B64A23008DA550 /* Default-568h@2x.png */,
+				D5C950EE16B64A23008DA550 /* Default.png */,
+				D5F9955E169C1EAF00B984B8 /* ico_big.png */,
+				D5F9955C169C1E5400B984B8 /* ico_small.png */,
+				D5330A05165F14DA009C582A /* Cal.h */,
+				D5330A06165F14DA009C582A /* Cal.m */,
+				D5F98EB016BF912300969FEE /* yongshiyiji.h */,
+				D5C950DB16B62D3D008DA550 /* Guomob */,
+				D53D14561699733100D47197 /* UMeng */,
+				D5CD583C16757DCC00E67B3F /* Image */,
+				D525CFB11671EFEB00DEEC1E /* View */,
+				8FF9B87113D0F1B900D1F44D /* Canlendar */,
+				8FF9B87213D0F1B900D1F44D /* Supporting Files */,
+				8FF9B86A13D0F1B900D1F44D /* Frameworks */,
+				8FF9B86813D0F1B900D1F44D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8FF9B86813D0F1B900D1F44D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8FF9B86713D0F1B900D1F44D /* Canlendar.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8FF9B86A13D0F1B900D1F44D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D53D14601699778500D47197 /* libz.dylib */,
+				D5C950EB16B62E5C008DA550 /* ImageIO.framework */,
+				D5C950E916B62E54008DA550 /* SystemConfiguration.framework */,
+				D5C950E716B62E48008DA550 /* CoreTelephony.framework */,
+				D55DDDA716AA963100E904AF /* QuartzCore.framework */,
+				D51418B71697DB8200AC69F4 /* MessageUI.framework */,
+				D51418B51697DB5200AC69F4 /* AddressBookUI.framework */,
+				8FF9B86B13D0F1B900D1F44D /* UIKit.framework */,
+				8FF9B86D13D0F1B900D1F44D /* Foundation.framework */,
+				8FF9B86F13D0F1B900D1F44D /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8FF9B87113D0F1B900D1F44D /* Canlendar */ = {
+			isa = PBXGroup;
+			children = (
+				D51418C71697F5A600AC69F4 /* Common.h */,
+				D5307D7B1675B98800C73CA3 /* CanlendarViewController.xib */,
+				D525CFAB1671EFDB00DEEC1E /* CanlendarAppDelegate.h */,
+				D525CFAC1671EFDB00DEEC1E /* CanlendarAppDelegate.m */,
+				D525CFAD1671EFDB00DEEC1E /* CanlendarViewController.h */,
+				D525CFAE1671EFDB00DEEC1E /* CanlendarViewController.m */,
+			);
+			path = Canlendar;
+			sourceTree = "<group>";
+		};
+		8FF9B87213D0F1B900D1F44D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8FF9B87D13D0F1B900D1F44D /* MainWindow.xib */,
+				8FF9B87313D0F1B900D1F44D /* Canlendar-Info.plist */,
+				8FF9B87413D0F1B900D1F44D /* InfoPlist.strings */,
+				8FF9B87713D0F1B900D1F44D /* Canlendar-Prefix.pch */,
+				8FF9B87813D0F1B900D1F44D /* main.m */,
+			);
+			name = "Supporting Files";
+			path = Canlendar;
+			sourceTree = "<group>";
+		};
+		D50A77AD16AFBFAC00717F2C /* FeedBack */ = {
+			isa = PBXGroup;
+			children = (
+				D50A77B516AFC2CB00717F2C /* UMFeedback.h */,
+				D50A77B316AFC2CB00717F2C /* libUMFeedback.a */,
+				D50A77B416AFC2CB00717F2C /* umFeedback.bundle */,
+			);
+			path = FeedBack;
+			sourceTree = "<group>";
+		};
+		D525CFB11671EFEB00DEEC1E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D5C950CD16B61DA5008DA550 /* AboutUs */,
+				D55DDDAC16AA9A8B00E904AF /* AHAlertView */,
+				D5A1FA2A169E4E6600E75594 /* ToDo */,
+				D5C3A3AD16994FF6000BB607 /* Start */,
+				D59F57861693E644007CCD90 /* Sidebar */,
+				D525CFB51671EFEB00DEEC1E /* TdCalendarView.h */,
+				D525CFB61671EFEB00DEEC1E /* TdCalendarView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D53D14561699733100D47197 /* UMeng */ = {
+			isa = PBXGroup;
+			children = (
+				D50A77AD16AFBFAC00717F2C /* FeedBack */,
+				D50F7012169BF31900E3C72C /* libMobClickLibrary.a */,
+				D50F7013169BF31900E3C72C /* MobClick.h */,
+			);
+			path = UMeng;
+			sourceTree = "<group>";
+		};
+		D55DDDAC16AA9A8B00E904AF /* AHAlertView */ = {
+			isa = PBXGroup;
+			children = (
+				D55DDDAD16AA9A8B00E904AF /* AHAlertSampleViewController.h */,
+				D55DDDAE16AA9A8B00E904AF /* AHAlertSampleViewController.m */,
+				D55DDDAF16AA9A8B00E904AF /* AHAlertView.h */,
+				D55DDDB016AA9A8B00E904AF /* AHAlertView.m */,
+				D55DDDB116AA9A8B00E904AF /* images */,
+			);
+			path = AHAlertView;
+			sourceTree = "<group>";
+		};
+		D55DDDB116AA9A8B00E904AF /* images */ = {
+			isa = PBXGroup;
+			children = (
+				D55DDDB216AA9A8B00E904AF /* custom-button-normal.png */,
+				D55DDDB316AA9A8B00E904AF /* custom-button-normal@2x.png */,
+				D55DDDB416AA9A8B00E904AF /* custom-cancel-normal.png */,
+				D55DDDB516AA9A8B00E904AF /* custom-cancel-normal@2x.png */,
+				D55DDDB616AA9A8B00E904AF /* custom-dialog-background.png */,
+				D55DDDB716AA9A8B00E904AF /* custom-dialog-background@2x.png */,
+			);
+			path = images;
+			sourceTree = "<group>";
+		};
+		D59F57861693E644007CCD90 /* Sidebar */ = {
+			isa = PBXGroup;
+			children = (
+				D5A1FA25169E4E1300E75594 /* SetupView.h */,
+				D5A1FA26169E4E1300E75594 /* SetupView.m */,
+				D5A1FA27169E4E1300E75594 /* SetupView.xib */,
+				D51418B01697C2DE00AC69F4 /* SidebarViewController.h */,
+				D51418B11697C2DE00AC69F4 /* SidebarViewController.m */,
+				D59F57871693E645007CCD90 /* SideBarSelectedDelegate.h */,
+				D59F578A1693E645007CCD90 /* SidebarViewController.xib */,
+			);
+			path = Sidebar;
+			sourceTree = "<group>";
+		};
+		D5A1FA2A169E4E6600E75594 /* ToDo */ = {
+			isa = PBXGroup;
+			children = (
+				D5A1FA2B169E4EA900E75594 /* ToDoViewController.xib */,
+				D5A1FA3C169E8A0600E75594 /* ToDoViewController.h */,
+				D5A1FA3D169E8A0600E75594 /* ToDoViewController.m */,
+				D5A1FA3F169E8ECD00E75594 /* FinishButton.h */,
+				D5A1FA40169E8ECD00E75594 /* FinishButton.m */,
+				D5A1FA4B169ECA2F00E75594 /* ToDoCell.h */,
+				D5A1FA4C169ECA2F00E75594 /* ToDoCell.m */,
+				D51035EF16A53C9500CF086E /* AddEventViewController.xib */,
+				D555A0FF16A00F720080ACC1 /* AddEventViewController.h */,
+				D555A10016A00F720080ACC1 /* AddEventViewController.m */,
+				D54A822C16A3D5AC007D81AA /* UITextViewCell.h */,
+				D54A822D16A3D5AC007D81AA /* UITextViewCell.m */,
+				D54A823016A3DC6C007D81AA /* AdviceCell.h */,
+				D54A823116A3DC6C007D81AA /* AdviceCell.m */,
+				D55DDD8A16AA74F000E904AF /* FinishViewController.xib */,
+				D51035E916A5243E00CF086E /* FinishViewController.h */,
+				D51035EA16A5243E00CF086E /* FinishViewController.m */,
+				D565724916A80AC300D4BD2A /* SetAdviceViewController.h */,
+				D565724A16A80AC400D4BD2A /* SetAdviceViewController.m */,
+				D565724B16A80AC400D4BD2A /* SetAdviceViewController.xib */,
+				D565724F16A8100400D4BD2A /* AdviceCell_2.h */,
+				D565725016A8100400D4BD2A /* AdviceCell_2.m */,
+			);
+			path = ToDo;
+			sourceTree = "<group>";
+		};
+		D5C3A3AD16994FF6000BB607 /* Start */ = {
+			isa = PBXGroup;
+			children = (
+				D5C3A3AE16994FF6000BB607 /* NewFuctionIntroductionView.h */,
+				D5C3A3AF16994FF6000BB607 /* NewFuctionIntroductionView.m */,
+				D5C3A3B016994FF6000BB607 /* StartView.h */,
+				D5C3A3B116994FF6000BB607 /* StartView.m */,
+				D5C3A3B216994FF6000BB607 /* StartViewController.h */,
+				D5C3A3B316994FF6000BB607 /* StartViewController.m */,
+			);
+			path = Start;
+			sourceTree = "<group>";
+		};
+		D5C950CD16B61DA5008DA550 /* AboutUs */ = {
+			isa = PBXGroup;
+			children = (
+				D5C950CF16B61DBB008DA550 /* AboutViewController.xib */,
+				D5C950D416B621AA008DA550 /* AboutViewController.h */,
+				D5C950D516B621AA008DA550 /* AboutViewController.m */,
+			);
+			path = AboutUs;
+			sourceTree = "<group>";
+		};
+		D5C950DB16B62D3D008DA550 /* Guomob */ = {
+			isa = PBXGroup;
+			children = (
+				D5C950E216B62DAB008DA550 /* GuomobAdSDK.h */,
+				D5C950E316B62DAB008DA550 /* GuomobAdSDKBundle.bundle */,
+				D5C950E416B62DAB008DA550 /* libGuomobAdSDK.a */,
+			);
+			path = Guomob;
+			sourceTree = "<group>";
+		};
+		D5CD583C16757DCC00E67B3F /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				D543073116B282A5004A9302 /* holiday.png */,
+				D543072716B281E2004A9302 /* daybg.png */,
+				D543072B16B281E2004A9302 /* workday.png */,
+				D543072916B281E2004A9302 /* todocancelbutton.png */,
+				D543072A16B281E2004A9302 /* todofinishbutton.png */,
+				D50A77C316AFE9DE00717F2C /* todosanjiao.png */,
+				D5A1FA49169EC33900E75594 /* kongbai.png */,
+				D50A3ED61675E4FC0097AC4E /* mainbackground.jpg */,
+				D5C3A3BF16995E55000BB607 /* setupbutton.png */,
+				D5BDB6131677311E00965726 /* showview.png */,
+				D58E8027169A7E930019244A /* today.png */,
+				D555A0F716A0054D0080ACC1 /* todoaddbutton.png */,
+				D555A0F816A0054D0080ACC1 /* todobackground_iphone4.png */,
+				D555A0F516A005440080ACC1 /* todobackground_iphone5.png */,
+				D5A1FA33169E7ABE00E75594 /* todocheckbox_normal.png */,
+				D5A1FA34169E7ABE00E75594 /* todocheckbox_select.png */,
+				D5A1FA30169E6FC100E75594 /* todotablecellbg.png */,
+				D5955FC01676EED1002D85B7 /* yearbackground.png */,
+			);
+			path = Image;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8FF9B86613D0F1B900D1F44D /* Canlendar */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8FF9B89E13D0F1BA00D1F44D /* Build configuration list for PBXNativeTarget "Canlendar" */;
+			buildPhases = (
+				8FF9B86313D0F1B900D1F44D /* Sources */,
+				8FF9B86413D0F1B900D1F44D /* Frameworks */,
+				8FF9B86513D0F1B900D1F44D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Canlendar;
+			productName = Canlendar;
+			productReference = 8FF9B86713D0F1B900D1F44D /* Canlendar.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8FF9B85E13D0F1B900D1F44D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				ORGANIZATIONNAME = beyondsoft;
+			};
+			buildConfigurationList = 8FF9B86113D0F1B900D1F44D /* Build configuration list for PBXProject "Canlendar" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 8FF9B85C13D0F1B900D1F44D;
+			productRefGroup = 8FF9B86813D0F1B900D1F44D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8FF9B86613D0F1B900D1F44D /* Canlendar */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8FF9B86513D0F1B900D1F44D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8FF9B87613D0F1B900D1F44D /* InfoPlist.strings in Resources */,
+				8FF9B87F13D0F1B900D1F44D /* MainWindow.xib in Resources */,
+				D5307D7C1675B98800C73CA3 /* CanlendarViewController.xib in Resources */,
+				D50A3ED71675E4FC0097AC4E /* mainbackground.jpg in Resources */,
+				D5955FC11676EED1002D85B7 /* yearbackground.png in Resources */,
+				D5BDB6141677311E00965726 /* showview.png in Resources */,
+				D59F578C1693E645007CCD90 /* SidebarViewController.xib in Resources */,
+				D5C3A3C016995E55000BB607 /* setupbutton.png in Resources */,
+				D58E8028169A7E930019244A /* today.png in Resources */,
+				D5F9955D169C1E5400B984B8 /* ico_small.png in Resources */,
+				D5F9955F169C1EAF00B984B8 /* ico_big.png in Resources */,
+				D5A1FA29169E4E1300E75594 /* SetupView.xib in Resources */,
+				D5A1FA2C169E4EA900E75594 /* ToDoViewController.xib in Resources */,
+				D5A1FA32169E6FC100E75594 /* todotablecellbg.png in Resources */,
+				D5A1FA36169E7ABE00E75594 /* todocheckbox_normal.png in Resources */,
+				D5A1FA37169E7ABE00E75594 /* todocheckbox_select.png in Resources */,
+				D5A1FA4A169EC33900E75594 /* kongbai.png in Resources */,
+				D555A0F616A005440080ACC1 /* todobackground_iphone5.png in Resources */,
+				D555A0F916A0054D0080ACC1 /* todoaddbutton.png in Resources */,
+				D555A0FA16A0054D0080ACC1 /* todobackground_iphone4.png in Resources */,
+				D51035F016A53C9600CF086E /* AddEventViewController.xib in Resources */,
+				D565724D16A80AC400D4BD2A /* SetAdviceViewController.xib in Resources */,
+				D55DDD8B16AA74F000E904AF /* FinishViewController.xib in Resources */,
+				D55DDDBA16AA9A8B00E904AF /* custom-button-normal.png in Resources */,
+				D55DDDBB16AA9A8B00E904AF /* custom-button-normal@2x.png in Resources */,
+				D55DDDBC16AA9A8B00E904AF /* custom-cancel-normal.png in Resources */,
+				D55DDDBD16AA9A8B00E904AF /* custom-cancel-normal@2x.png in Resources */,
+				D55DDDBE16AA9A8B00E904AF /* custom-dialog-background.png in Resources */,
+				D55DDDBF16AA9A8B00E904AF /* custom-dialog-background@2x.png in Resources */,
+				D50A77B716AFC2CB00717F2C /* umFeedback.bundle in Resources */,
+				D50A77C416AFE9DE00717F2C /* todosanjiao.png in Resources */,
+				D543072C16B281E2004A9302 /* daybg.png in Resources */,
+				D543072E16B281E2004A9302 /* todocancelbutton.png in Resources */,
+				D543072F16B281E2004A9302 /* todofinishbutton.png in Resources */,
+				D543073016B281E2004A9302 /* workday.png in Resources */,
+				D543073216B282A5004A9302 /* holiday.png in Resources */,
+				D5C950D016B61DBB008DA550 /* AboutViewController.xib in Resources */,
+				D5C950E516B62DAB008DA550 /* GuomobAdSDKBundle.bundle in Resources */,
+				D5C950EF16B64A23008DA550 /* Default-568h@2x.png in Resources */,
+				D5C950F016B64A23008DA550 /* Default.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8FF9B86313D0F1B900D1F44D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8FF9B87913D0F1B900D1F44D /* main.m in Sources */,
+				D5330A07165F14DA009C582A /* Cal.m in Sources */,
+				D525CFAF1671EFDB00DEEC1E /* CanlendarAppDelegate.m in Sources */,
+				D525CFB01671EFDB00DEEC1E /* CanlendarViewController.m in Sources */,
+				D525CFB91671EFEB00DEEC1E /* TdCalendarView.m in Sources */,
+				D51418B21697C2DE00AC69F4 /* SidebarViewController.m in Sources */,
+				D5C3A3B416994FF6000BB607 /* NewFuctionIntroductionView.m in Sources */,
+				D5C3A3B516994FF6000BB607 /* StartView.m in Sources */,
+				D5C3A3B616994FF6000BB607 /* StartViewController.m in Sources */,
+				D5A1FA28169E4E1300E75594 /* SetupView.m in Sources */,
+				D5A1FA3E169E8A0600E75594 /* ToDoViewController.m in Sources */,
+				D5A1FA41169E8ECE00E75594 /* FinishButton.m in Sources */,
+				D5A1FA4D169ECA2F00E75594 /* ToDoCell.m in Sources */,
+				D555A10116A00F720080ACC1 /* AddEventViewController.m in Sources */,
+				D54A822E16A3D5AC007D81AA /* UITextViewCell.m in Sources */,
+				D54A823216A3DC6C007D81AA /* AdviceCell.m in Sources */,
+				D51035EB16A5243F00CF086E /* FinishViewController.m in Sources */,
+				D565724C16A80AC400D4BD2A /* SetAdviceViewController.m in Sources */,
+				D565725116A8100500D4BD2A /* AdviceCell_2.m in Sources */,
+				D55DDDB816AA9A8B00E904AF /* AHAlertSampleViewController.m in Sources */,
+				D55DDDB916AA9A8B00E904AF /* AHAlertView.m in Sources */,
+				D5C950D616B621AA008DA550 /* AboutViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		8FF9B87413D0F1B900D1F44D /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8FF9B87513D0F1B900D1F44D /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		8FF9B87D13D0F1B900D1F44D /* MainWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8FF9B87E13D0F1B900D1F44D /* en */,
+			);
+			name = MainWindow.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8FF9B89C13D0F1BA00D1F44D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Xiaofeng Zhang (77G675B8QT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = "";
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "BBB24DD9-4502-4309-8FAF-BE9A4EC6A70C";
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		8FF9B89D13D0F1BA00D1F44D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Xiaofeng Zhang (77G675B8QT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = "";
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "BBB24DD9-4502-4309-8FAF-BE9A4EC6A70C";
+				SDKROOT = iphoneos;
+			};
+			name = Release;
+		};
+		8FF9B89F13D0F1BA00D1F44D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Xiaofeng Zhang (77G675B8QT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Canlendar/Canlendar-Prefix.pch";
+				INFOPLIST_FILE = "Canlendar/Canlendar-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/UMeng\"",
+					"\"$(SRCROOT)/UMeng/FeedBack\"",
+					"\"$(SRCROOT)/Guomob\"",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "BBB24DD9-4502-4309-8FAF-BE9A4EC6A70C";
+				TARGETED_DEVICE_FAMILY = 1;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		8FF9B8A013D0F1BA00D1F44D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Xiaofeng Zhang (77G675B8QT)";
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Canlendar/Canlendar-Prefix.pch";
+				INFOPLIST_FILE = "Canlendar/Canlendar-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/UMeng\"",
+					"\"$(SRCROOT)/UMeng/FeedBack\"",
+					"\"$(SRCROOT)/Guomob\"",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "BBB24DD9-4502-4309-8FAF-BE9A4EC6A70C";
+				TARGETED_DEVICE_FAMILY = 1;
+				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8FF9B86113D0F1B900D1F44D /* Build configuration list for PBXProject "Canlendar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8FF9B89C13D0F1BA00D1F44D /* Debug */,
+				8FF9B89D13D0F1BA00D1F44D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8FF9B89E13D0F1BA00D1F44D /* Build configuration list for PBXNativeTarget "Canlendar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8FF9B89F13D0F1BA00D1F44D /* Debug */,
+				8FF9B8A013D0F1BA00D1F44D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8FF9B85E13D0F1B900D1F44D /* Project object */;
+}
