@@ -35,4 +35,11 @@
 
 //设置 本地闹钟提醒
 -(void)schedulNotificationWithYear:(NSDate*)setDate andMsg:(NSString *)msg;
+
+/**
+ *  官方推荐判断系统设备的方法
+ *
+ *  @return Version
+ */
+-(NSInteger)DeviceSystemMajorVersion;
 @end

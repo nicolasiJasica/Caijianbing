@@ -13,6 +13,9 @@
 #import "SidebarViewController.h"
 #import "CanlendarAppDelegate.h"
 #import "yongshiyiji.h"
+
+#define kDetailViewHeight (MY_IOS_VERSION_7 ? 150 - 10 : 150)
+
 @interface CanlendarViewController (internal)
 
 - (void)setupDetailView;
@@ -61,21 +64,22 @@
     self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"mainbackground.jpg"]];
  
     //当前日期
-    UIButton* todayButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 10, 60, 30)];
+    UIButton* todayButton = [[UIButton alloc] initWithFrame:CGRectMake(0, VIEW_TOP_MARGIN, 60, 30)];
     [todayButton addTarget:self action: @selector(SetTodayDate) forControlEvents:UIControlEventTouchUpInside];
     [todayButton setImage:[UIImage imageNamed:@"today.png"] forState:UIControlStateNormal];
     todayButton.showsTouchWhenHighlighted = TRUE;
     [self.view addSubview:todayButton];
     [todayButton release];
     //设置
-    UIButton* setupButton = [[UIButton alloc] initWithFrame:CGRectMake(260, 10, 60, 30)];
+    UIButton* setupButton = [[UIButton alloc] initWithFrame:CGRectMake(260, VIEW_TOP_MARGIN, 60, 30)];
     [setupButton addTarget:self action: @selector(SetSelectDate) forControlEvents:UIControlEventTouchUpInside];
     [setupButton setImage:[UIImage imageNamed:@"setupbutton.png"] forState:UIControlStateNormal];
     setupButton.showsTouchWhenHighlighted = TRUE;
     [self.view addSubview:setupButton];
     [setupButton release];
  
-    detailView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, [UIScreen mainScreen].bounds.size.height - 150, 320, 150)];
+    NSLog(@"%@",self.view);
+    detailView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, [UIScreen mainScreen].bounds.size.height - kDetailViewHeight, 320, kDetailViewHeight)];
     detailView.delegate = self;
     detailView.scrollEnabled = YES;
 //    detailView.contentSize = CGSizeMake(320, 250);
@@ -83,13 +87,13 @@
     [UIColor colorWithPatternImage:[UIImage imageNamed:@"showview.png"]];
     [self.view addSubview:detailView];
     if (iPhone5) {
-        UIImageView* imageview = [[[UIImageView alloc] initWithFrame:CGRectMake(0, [UIScreen mainScreen].bounds.size.height - 150 - 77, 320, 77)] autorelease];
+        UIImageView* imageview = [[[UIImageView alloc] initWithFrame:CGRectMake(0, [UIScreen mainScreen].bounds.size.height - kDetailViewHeight - 77, 320, 77)] autorelease];
         imageview.image = [UIImage imageNamed:@"daybg.png"];
         [self.view addSubview:imageview];
         
         NSString* geyanjingju_text = [(CanlendarAppDelegate*)[[UIApplication sharedApplication] delegate] get_UMeng_geyanjingju];
  
-        geyanjingjuView = [[UITextView alloc] initWithFrame:CGRectMake(90, [UIScreen mainScreen].bounds.size.height - 150 - 52, 220, 52)];
+        geyanjingjuView = [[UITextView alloc] initWithFrame:CGRectMake(90, [UIScreen mainScreen].bounds.size.height - kDetailViewHeight - 52, 220, 52)];
         geyanjingjuView.text = geyanjingju_text;
         [geyanjingjuView setTextColor:[UIColor colorWithRed:170.0/255.0 green:56.0/255.0 blue:9.0/255.0 alpha:1.0]];
         [geyanjingjuView setFont:[UIFont systemFontOfSize:12.0f]];
@@ -196,6 +200,9 @@
     [detailView addSubview:lable4];
  
     self.tdCalendarView.calendarViewDelegate = self;
+    if (VIEW_TOP_MARGIN) {
+        self.tdCalendarView.frame = CGRectMake(0, VIEW_TOP_MARGIN, self.tdCalendarView.bounds.size.width, self.tdCalendarView.bounds.size.height);
+    }
     ((CanlendarAppDelegate*)[[UIApplication sharedApplication] delegate]).canlendarViewController = self;
  
     //果盟 广告
@@ -890,7 +897,7 @@
     bannerAD.delegate=self;
     
     //可以广告的位置,大小设屏幕即可以
-    bannerAD.frame=CGRectMake(0, 285 + (iPhone5 ? 5 : 0) ,320, /*[UIScreen mainScreen].bounds.size.height*/50);
+    bannerAD.frame=CGRectMake(0, 285 + /*(iPhone5 ? 5 : 0)*/ (MY_IOS_VERSION_7 ? 15 : 0),320, /*[UIScreen mainScreen].bounds.size.height*/50);
     
     //加载广告 只需调用一次,不需要多次loadAd
     [bannerAD loadAd];

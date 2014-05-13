@@ -13,6 +13,7 @@
 		8FF9B87613D0F1B900D1F44D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8FF9B87413D0F1B900D1F44D /* InfoPlist.strings */; };
 		8FF9B87913D0F1B900D1F44D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FF9B87813D0F1B900D1F44D /* main.m */; };
 		8FF9B87F13D0F1B900D1F44D /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FF9B87D13D0F1B900D1F44D /* MainWindow.xib */; };
+		CDAC82C619222CB900AF64A5 /* aboutUs_ico.png in Resources */ = {isa = PBXBuildFile; fileRef = CDAC82C519222CB900AF64A5 /* aboutUs_ico.png */; };
 		D50A3ED71675E4FC0097AC4E /* mainbackground.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D50A3ED61675E4FC0097AC4E /* mainbackground.jpg */; };
 		D50A77B616AFC2CB00717F2C /* libUMFeedback.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D50A77B316AFC2CB00717F2C /* libUMFeedback.a */; };
 		D50A77B716AFC2CB00717F2C /* umFeedback.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D50A77B416AFC2CB00717F2C /* umFeedback.bundle */; };
@@ -93,6 +94,7 @@
 		8FF9B87713D0F1B900D1F44D /* Canlendar-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Canlendar-Prefix.pch"; sourceTree = "<group>"; };
 		8FF9B87813D0F1B900D1F44D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8FF9B87E13D0F1B900D1F44D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
+		CDAC82C519222CB900AF64A5 /* aboutUs_ico.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = aboutUs_ico.png; sourceTree = "<group>"; };
 		D50A3ED61675E4FC0097AC4E /* mainbackground.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = mainbackground.jpg; sourceTree = "<group>"; };
 		D50A77B316AFC2CB00717F2C /* libUMFeedback.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libUMFeedback.a; sourceTree = "<group>"; };
 		D50A77B416AFC2CB00717F2C /* umFeedback.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = umFeedback.bundle; sourceTree = "<group>"; };
@@ -424,6 +426,7 @@
 		D5CD583C16757DCC00E67B3F /* Image */ = {
 			isa = PBXGroup;
 			children = (
+				CDAC82C519222CB900AF64A5 /* aboutUs_ico.png */,
 				D543073116B282A5004A9302 /* holiday.png */,
 				D543072716B281E2004A9302 /* daybg.png */,
 				D543072B16B281E2004A9302 /* workday.png */,
@@ -502,6 +505,7 @@
 				D50A3ED71675E4FC0097AC4E /* mainbackground.jpg in Resources */,
 				D5955FC11676EED1002D85B7 /* yearbackground.png in Resources */,
 				D5BDB6141677311E00965726 /* showview.png in Resources */,
+				CDAC82C619222CB900AF64A5 /* aboutUs_ico.png in Resources */,
 				D59F578C1693E645007CCD90 /* SidebarViewController.xib in Resources */,
 				D5C3A3C016995E55000BB607 /* setupbutton.png in Resources */,
 				D58E8028169A7E930019244A /* today.png in Resources */,
@@ -632,7 +636,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Xiaofeng Zhang (77G675B8QT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: liangliang wei (Y8L3WN432Q)";
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -647,7 +651,7 @@
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "BBB24DD9-4502-4309-8FAF-BE9A4EC6A70C";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
@@ -658,7 +662,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Xiaofeng Zhang (77G675B8QT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: liangliang wei (Y8L3WN432Q)";
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Canlendar/Canlendar-Prefix.pch";
@@ -672,7 +676,7 @@
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "BBB24DD9-4502-4309-8FAF-BE9A4EC6A70C";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				TARGETED_DEVICE_FAMILY = 1;
 				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = app;

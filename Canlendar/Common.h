@@ -55,7 +55,7 @@
  
 
 
-#define DEBUG_ 0
+#define DEBUG_ 1
 #if DEBUG_
 #undef NSLog
 #define NSLog(...) NSLog(__VA_ARGS__)
@@ -67,4 +67,10 @@
 #define NSTrace() NSLog(@"%s,%d",__FUNCTION__,__LINE__)
 //初始化 用事宜忌
 #define KYiJiArray [NSArray arrayWithObjects:@"祭祀",@"祈福",@"求嗣",@"开光",@"塑绘",@"出行",@"齐醮",@"出火",@"纳采",@"裁衣",@"合帐",@"冠笄",@"嫁娶",@"纳婿",@"沐浴",@"剃头",@"整手足甲",@"分居",@"进人口",@"解除",@"修造",@"起基动土",@"伐木做梁",@"竖柱",@"上梁",@"开柱眼",@"穿屏扇架",@"安门",@"盖屋合脊",@"求医疗病 ",@"安床",@"移徙",@"入宅",@"挂匾",@"开市",@"立券",@"纳财",@"酝酿",@"捕捉",@"栽种",@"畋猎",@"纳畜",@"教牛马",@"破屋坏垣",@"拆卸",@"开井",@"作陂",@"开厕",@"造仓库",@"塞穴",@"",@"平治道涂",@"修墓",@"启攒",@"开生坟",@"合寿木",@"谢土",@"安葬",@"入殓",@"成服",@"除服",@"移柩",@"破土",@"开仓",@"筑堤",@"归宁",@"普渡",@"经络",@"安葬",@"订盟",@"赴任",@"挂匾",@"酬神",@"理发",@"余事勿取",@"诸事不宜",nil]
- 
+
+
+#define CADAPP ((CanlendarAppDelegate*) [UIApplication sharedApplication].delegate)
+
+#define MY_IOS_VERSION_7 (CADAPP.DeviceSystemMajorVersion >= 7)
+
+#define VIEW_TOP_MARGIN (MY_IOS_VERSION_7 ? 20 : 10)
