@@ -36,24 +36,24 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    imageView = [[[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 320, [UIScreen mainScreen].bounds.size.height - 20)] autorelease];
+    imageView = [[[UIImageView alloc] initWithFrame:CGRectMake(0, 0 + (MY_IOS_VERSION_7 ? 20 : 0), 320, [UIScreen mainScreen].bounds.size.height - 20)] autorelease];
     [self.view addSubview:imageView];
     if (iPhone5) {
         imageView.image = [UIImage imageNamed:@"todobackground_iphone5.png"];
     }
     else
         imageView.image = [UIImage imageNamed:@"todobackground_iphone4.png"];
-    UIButton* cancelButton = [[[UIButton alloc] initWithFrame:CGRectMake(10, 5, 54, 34)] autorelease];
+    UIButton* cancelButton = [[[UIButton alloc] initWithFrame:CGRectMake(10, 5+ (MY_IOS_VERSION_7 ? 20 : 0), 54, 34)] autorelease];
     [cancelButton setBackgroundImage:[UIImage imageNamed:@"todocancelbutton.png"] forState:UIControlStateNormal];
     [cancelButton addTarget:self action:@selector(cancelButtonPress) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:cancelButton];
  
-    UIButton* finishButton = [[[UIButton alloc] initWithFrame:CGRectMake(250, 5, 60, 35)] autorelease];
+    UIButton* finishButton = [[[UIButton alloc] initWithFrame:CGRectMake(250, 5 + (MY_IOS_VERSION_7 ? 20 : 0), 60, 35)] autorelease];
     [finishButton setBackgroundImage:[UIImage imageNamed:@"todofinishbutton.png"] forState:UIControlStateNormal];
     [finishButton addTarget:self action:@selector(finishButtonPress) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:finishButton];
     
-    UILabel* titleLable = [[[UILabel alloc] initWithFrame:CGRectMake(20, 50, 200, 45)] autorelease];
+    UILabel* titleLable = [[[UILabel alloc] initWithFrame:CGRectMake(20, 50 + (MY_IOS_VERSION_7 ? 20 : 0), 200, 45)] autorelease];
     titleLable.textAlignment = UITextAlignmentLeft;
     titleLable.backgroundColor = [UIColor clearColor];
     titleLable.text = @"已完成事件";
@@ -66,7 +66,7 @@
     NSLog(@"已完成 提醒事件 数据：%@",userarray);
     
     m_CellCount = [userarray count];
-    NSInteger heightIndex = 100;
+    NSInteger heightIndex = 100 + (MY_IOS_VERSION_7 ? 20 : 0);
  
     
     m_tableView = [[UITableView alloc] initWithFrame:CGRectMake(15, heightIndex + 5, 290, (iPhone5 ? 345 + 45 : 250 + 45)) style:UITableViewStylePlain];

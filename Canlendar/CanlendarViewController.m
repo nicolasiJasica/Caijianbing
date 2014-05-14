@@ -252,7 +252,7 @@
 -(void) setupDatePickerSheet
 {
     //在iphone中没有点击弹出选择时间的控件，下面就利用ios的UIActionSheet + UIDatePicker + UIToolBar 来实现弹出时间选择控件。代码如下：
-    m_datePickerSheet = [[UIActionSheet alloc] initWithTitle:nil delegate:nil cancelButtonTitle:@"取消" destructiveButtonTitle:nil otherButtonTitles:nil, nil];
+    m_datePickerSheet = [[UIActionSheet alloc] initWithTitle:nil delegate:nil cancelButtonTitle:@"" destructiveButtonTitle:nil otherButtonTitles:nil, nil];
     
     m_datePicker = [[[UIDatePicker alloc] initWithFrame:CGRectMake(0.0f, 44.0f, 0.0f, 0.0f)] autorelease];
     /*
@@ -300,8 +300,11 @@
     
     [m_datePickerSheet addSubview:pickerDateToolBar];
     [m_datePickerSheet addSubview:m_datePicker];
+    NSLog(@"keyWindow :  %@",[UIApplication sharedApplication].keyWindow);
     [m_datePickerSheet showInView: [UIApplication sharedApplication].keyWindow]; //这里使用全局的键盘的view，可以避免在有tabBar或者toolBar的页面，把actionSheet下方挡住。
-    [m_datePickerSheet setFrame:CGRectMake(0.0f, [UIScreen mainScreen].bounds.size.height - 260, [UIScreen mainScreen].bounds.size.width, 260)];
+    NSInteger pickerHeight = MY_IOS_VERSION_7 ? 260 + 25 : 260;
+    NSInteger originY = [UIScreen mainScreen].bounds.size.height - 260  +  (MY_IOS_VERSION_7 ? 20 : 0);
+    [m_datePickerSheet setFrame:CGRectMake(0.0f, originY, 320, pickerHeight)];
 //    [m_datePickerSheet setBounds:CGRectMake(0.0f, [UIScreen mainScreen].bounds.size.height - 260, [UIScreen mainScreen].bounds.size.width, 260)];
  
 }

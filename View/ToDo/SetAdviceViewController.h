@@ -21,6 +21,8 @@
 @property(nonatomic,assign) BOOL isAdvice;
 @property(nonatomic,retain) NSDate* currentSelectDate;
 @property (strong,nonatomic)IBOutlet UIImageView *imageView;
+
+@property (strong,nonatomic)IBOutlet UIView *datePickerView;
 @property (strong,nonatomic)IBOutlet UIDatePicker *datePicker;
 
 -(void) adviceButtonPress:(BOOL)start;

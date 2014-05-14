@@ -6,7 +6,7 @@
 //  Copyright (c) 2013年 beyondsoft. All rights reserved.
 //
 #import <Foundation/NSObjCRuntime.h>
-
+#import "CanlendarAppDelegate.h"
 #define KCurrentVersion  [[UIDevice currentDevice].systemVersion doubleValue]//判定系统版本。
 
 //KChannelId 为nil或@""时,默认会被被当作@"App Store"渠道
@@ -41,7 +41,7 @@
 //设置页面 切换 
 #define ContentOffset 273
 #define ContentMinOffset 60
-#define MoveAnimationDuration 0.7
+#define MoveAnimationDuration 0.3
 
 //提醒事项
 #define KToDo_finishEvent  @"ToDo_finishEvent"

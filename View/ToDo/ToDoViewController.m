@@ -7,7 +7,7 @@
 //
 
 #import "ToDoViewController.h"
-#import "Common.h"
+
 #import "ToDoCell.h"
 #import "AddEventViewController.h"
 #import "FinishViewController.h"
@@ -44,18 +44,19 @@
     }
     else
         imageView.image = [UIImage imageNamed:@"todobackground_iphone4.png"];
-    UIButton* cancelButton = [[[UIButton alloc] initWithFrame:CGRectMake(10, 5, 54, 34)] autorelease];
+ 
+    UIButton* cancelButton = [[[UIButton alloc] initWithFrame:CGRectMake(10, 5 + (MY_IOS_VERSION_7 ? 10 : 0), 54, 34 - (MY_IOS_VERSION_7 ? 5 : 0))] autorelease];
     [cancelButton setBackgroundImage:[UIImage imageNamed:@"todocancelbutton.png"] forState:UIControlStateNormal];
     [cancelButton addTarget:self action:@selector(cancelButtonPress) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:cancelButton];
  
-    UIButton* addButton = [[[UIButton alloc] initWithFrame:CGRectMake(260, 55, 38, 38)] autorelease];
+    UIButton* addButton = [[[UIButton alloc] initWithFrame:CGRectMake(260, 55 + (MY_IOS_VERSION_7 ? 5 : 0),  38, 38)] autorelease];
     [addButton setBackgroundImage:[UIImage imageNamed:@"todoaddbutton.png"] forState:UIControlStateNormal];
     addButton.showsTouchWhenHighlighted = TRUE;
     [addButton addTarget:self action:@selector(addButtonPress) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:addButton];
     
-    UIButton* finishButton = [[[UIButton alloc] initWithFrame:CGRectMake(250, 5, 60, 35)] autorelease];
+    UIButton* finishButton = [[[UIButton alloc] initWithFrame:CGRectMake(250, 5 + (MY_IOS_VERSION_7 ? 10 : 0), 60, 35 - (MY_IOS_VERSION_7 ? 5 : 0))] autorelease];
     [finishButton setBackgroundImage:[UIImage imageNamed:@"todofinishbutton.png"] forState:UIControlStateNormal];
     [finishButton addTarget:self action:@selector(finishButtonPress) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:finishButton];
@@ -65,13 +66,14 @@
     NSLog(@"提醒事件 数据：%@",userarray);
     
     m_unfinishCellCount = [userarray count];
-    NSInteger heightIndex = 100;
+    NSInteger heightIndex = 100  + (MY_IOS_VERSION_7 ? 5 : 0);
  
     m_finishButton = [[FinishButton alloc] initWithFrame:CGRectMake(0, heightIndex, 320, 50)];
+    m_finishButton.backgroundColor = [UIColor clearColor];
     [m_finishButton addTarget:self action:@selector(hasfinishButtonPress) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:m_finishButton];
  
-    m_tableView = [[UITableView alloc] initWithFrame:CGRectMake(15, heightIndex + 50, 290, (iPhone5 ? 345 : 250)) style:UITableViewStylePlain];
+    m_tableView = [[UITableView alloc] initWithFrame:CGRectMake(15, heightIndex + 50 + (MY_IOS_VERSION_7 ? 5 : 0), 290, (iPhone5 ? 345 : 250 + (MY_IOS_VERSION_7 ? 20 : 0))) style:UITableViewStylePlain];
     m_tableView.delegate = self;
     m_tableView.dataSource = self;
     

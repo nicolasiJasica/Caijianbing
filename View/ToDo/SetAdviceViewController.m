@@ -39,12 +39,12 @@
     else
         imageView.image = [UIImage imageNamed:@"todobackground_iphone4.png"];
     
-    UIButton* cancelButton = [[[UIButton alloc] initWithFrame:CGRectMake(10, 5, 54, 34)] autorelease];
+    UIButton* cancelButton = [[[UIButton alloc] initWithFrame:CGRectMake(10, 5 + (MY_IOS_VERSION_7 ? 10 : 0), 54, 34 - (MY_IOS_VERSION_7 ? 5 : 0))] autorelease];
     [cancelButton setBackgroundImage:[UIImage imageNamed:@"todocancelbutton.png"] forState:UIControlStateNormal];
     [cancelButton addTarget:self action:@selector(cancelButtonPress) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:cancelButton];
     
-    UIButton* finishButton = [[[UIButton alloc] initWithFrame:CGRectMake(250, 5, 60, 35)] autorelease];
+    UIButton* finishButton = [[[UIButton alloc] initWithFrame:CGRectMake(250, 5  + (MY_IOS_VERSION_7 ? 10 : 0), 60, 35 - (MY_IOS_VERSION_7 ? 5 : 0))] autorelease];
     [finishButton setBackgroundImage:[UIImage imageNamed:@"todofinishbutton.png"] forState:UIControlStateNormal];
     [finishButton addTarget:self action:@selector(finishButtonPress) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:finishButton];
@@ -52,6 +52,9 @@
     //挂接一个委托
     [m_datePicker addTarget:self action:@selector(dateChanged:) forControlEvents:UIControlEventValueChanged ];
     m_datePicker.hidden = YES;
+    self.datePickerView.hidden = YES;
+    self.datePickerView.frame = CGRectMake(0, [UIScreen mainScreen].bounds.size.height - 216, 320, 216);
+    
     [m_datePicker setLocale:[[NSLocale alloc] initWithLocaleIdentifier:@"zh_CN"]];
     //有的时候为了在系统中统一时间，需要在服务器和客户端统一交换的时间时区，比如都用GMT。转换为中国时区+8
     //NSTimeZoneNameStyleShortStandard
@@ -68,6 +71,7 @@
     NSLog(@"PickerDefaultDate : %@",m_datePicker.date);
     
     [self setupTableView];
+    
 }
 
 -(void) setupTableView
@@ -93,6 +97,7 @@
 }
 -(void) cancelButtonPress
 {
+    self.datePickerView.hidden = YES;
     m_datePicker.hidden = YES;
     [self dismissModalViewControllerAnimated:YES];
     [super viewWillAppear:YES];
@@ -101,6 +106,7 @@
 -(void) finishButtonPress
 {
     m_datePicker.hidden = YES;
+    self.datePickerView.hidden = YES;
     [self dismissModalViewControllerAnimated:YES];
     
     NSMutableDictionary* adviceDict = [NSMutableDictionary dictionary];
@@ -205,14 +211,19 @@
 {
     if (indexPath.row == 1) {
         
-        for (int j = 0; j < [[m_tableView subviews] count]; j++) {
-            
-            if ([[[m_tableView subviews] objectAtIndex:j] isKindOfClass:[AdviceCell class]]) {
-                AdviceCell* cell = (AdviceCell*)[[m_tableView subviews] objectAtIndex:j];
-                if (cell.isAdvice) {
-                    m_datePicker.hidden = NO;
-                }
-            }
+//        for (int j = 0; j < [[m_tableView subviews] count]; j++) {
+//            
+//            if ([[[m_tableView subviews] objectAtIndex:j] isKindOfClass:[AdviceCell class]]) {
+//                AdviceCell* cell = (AdviceCell*)[[m_tableView subviews] objectAtIndex:j];
+//                if (cell.isAdvice) {
+//                    m_datePicker.hidden = NO;
+//                }
+//            }
+//        }
+        AdviceCell* cell = (AdviceCell*)[m_tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]];
+        if (cell && cell.isAdvice) {
+            self.datePickerView.hidden = NO;
+            m_datePicker.hidden = NO;
         }
     }
 }
@@ -222,13 +233,13 @@
 
     NSDate* _date = control.date;
     /*添加你自己响应代码*/
-    for (int j = 0; j < [[m_tableView subviews] count]; j++) {
-        if ([[[m_tableView subviews] objectAtIndex:j] isKindOfClass:[UITableViewCell class]]) {
-            m_datePicker.hidden = NO;
-            self.currentSelectDate = _date;
-            UITableViewCell* cell = (UITableViewCell*)[[m_tableView subviews] objectAtIndex:j];
-            cell.textLabel.text = [(CanlendarAppDelegate*)[[UIApplication sharedApplication] delegate] getTime_byNSdate:_date];
-        }
+    
+    AdviceCell* cell = (AdviceCell*)[m_tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:1 inSection:0]];
+    if (cell) {
+        self.datePickerView.hidden = NO;
+        m_datePicker.hidden = NO;
+        self.currentSelectDate = _date;
+        cell.textLabel.text = [(CanlendarAppDelegate*)[[UIApplication sharedApplication] delegate] getTime_byNSdate:_date];
     }
 }
 
@@ -248,6 +259,7 @@
         m_isAdvice = NO;
         self.currentSelectDate = nil;
         m_datePicker.hidden = YES;
+        self.datePickerView.hidden = YES;
     }
     [self setupTableView];
     

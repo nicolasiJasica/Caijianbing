@@ -40,7 +40,7 @@
         tip.font = [UIFont systemFontOfSize:15];
         [self addSubview:tip];
  
-        UIImageView* view = [[[UIImageView alloc] initWithFrame:CGRectMake(275, 15, 8, 25/2)] autorelease];
+        UIImageView* view = [[[UIImageView alloc] initWithFrame:CGRectMake(275, 15 + 5, 8, 25/2)] autorelease];
         view.image = [UIImage imageNamed:@"todosanjiao.png"];
         [self addSubview:view];
     }

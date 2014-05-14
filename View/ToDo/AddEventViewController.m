@@ -55,7 +55,7 @@
         imageView.image = [UIImage imageNamed:@"todobackground_iphone4.png"];
  
     //btn2.layer.borderColor = [UIColor grayColor].CGColor;
-    UIButton* cancelButton = [[[UIButton alloc] initWithFrame:CGRectMake(10, 5, 49, 29)] autorelease];
+    UIButton* cancelButton = [[[UIButton alloc] initWithFrame:CGRectMake(10, 5+ (MY_IOS_VERSION_7 ? 10 : 0), 49, 29)] autorelease];
 //    cancelButton.adjustsImageWhenHighlighted = NO;
 //    cancelButton.layer. = 10.0;
 //    /* 下面的这个属性设置为yes的状态下，按钮按下会发光*/
@@ -66,7 +66,7 @@
     [cancelButton addTarget:self action:@selector(cancelButtonPress) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:cancelButton];
     
-    UIButton* finishButton = [[[UIButton alloc] initWithFrame:CGRectMake(250, 5, 54, 29)] autorelease];
+    UIButton* finishButton = [[[UIButton alloc] initWithFrame:CGRectMake(250, 5 + (MY_IOS_VERSION_7 ? 10 : 0), 54, 29)] autorelease];
     [finishButton setBackgroundImage:[UIImage imageNamed:@"todofinishbutton.png"] forState:UIControlStateNormal];
     [finishButton addTarget:self action:@selector(finishButtonPress) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:finishButton];
@@ -89,7 +89,7 @@
         }
     }
  
-    m_tableView = [[UITableView alloc] initWithFrame:CGRectMake(15, heightIndex, 290, 395  - 4 * 45 + 80) style:UITableViewStylePlain];
+    m_tableView = [[UITableView alloc] initWithFrame:CGRectMake(15, heightIndex, 290, 395  - 4 * 45 + 80 + (MY_IOS_VERSION_7 ? 20 : 0)) style:UITableViewStylePlain];
     m_tableView.delegate = self;
     m_tableView.dataSource = self;
  
@@ -141,6 +141,25 @@
     NSMutableArray* finishEventArrayCopy = [[[NSMutableArray alloc] initWithArray:array] autorelease];
     NSMutableDictionary* dic = [[[NSMutableDictionary alloc] init] autorelease];
 
+    UITextViewCell* cell = (UITextViewCell*)[m_tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]];
+    if (cell) {
+        if ([[cell getTextView] isEqualToString:@""]) {
+            //提醒
+            NSString *title = @"提示";
+            NSString *message = @"请填写提醒事项内容";
+            
+            UIAlertView* alertView = [[UIAlertView alloc] initWithTitle:title message:message delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil];
+            [alertView show];
+            [alertView release];
+            return;
+        }
+        
+        [dic setValue:[cell getTextView] forKey:KToDo_Title];
+    }
+    else{
+        return;
+    }
+    
     for (int j = 0; j < [[m_tableView subviews] count]; j++) {
         if ([[[m_tableView subviews] objectAtIndex:j] isKindOfClass:[UITextViewCell class]]) {
             if ([[(UITextViewCell*)[[m_tableView subviews] objectAtIndex:j] getTextView] isEqualToString:@""]) {

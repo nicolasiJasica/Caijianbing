@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "FinishButton.h"
+#import "Common.h"
 @interface ToDoViewController : UIViewController<UITableViewDelegate,UITableViewDataSource>
 {
     UIImageView*                imageView;
