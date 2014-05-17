@@ -14,6 +14,13 @@
 		8FF9B87913D0F1B900D1F44D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FF9B87813D0F1B900D1F44D /* main.m */; };
 		8FF9B87F13D0F1B900D1F44D /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FF9B87D13D0F1B900D1F44D /* MainWindow.xib */; };
 		CDAC82C619222CB900AF64A5 /* aboutUs_ico.png in Resources */ = {isa = PBXBuildFile; fileRef = CDAC82C519222CB900AF64A5 /* aboutUs_ico.png */; };
+		CDB1347E1926FAF8007E2DE0 /* Icon-120X120.png in Resources */ = {isa = PBXBuildFile; fileRef = CDB1347D1926FAF8007E2DE0 /* Icon-120X120.png */; };
+		CDB134821926FC51007E2DE0 /* Icon-29X29.png in Resources */ = {isa = PBXBuildFile; fileRef = CDB1347F1926FC51007E2DE0 /* Icon-29X29.png */; };
+		CDB134831926FC51007E2DE0 /* Icon-58X58.png in Resources */ = {isa = PBXBuildFile; fileRef = CDB134801926FC51007E2DE0 /* Icon-58X58.png */; };
+		CDB134841926FC51007E2DE0 /* Icon-80X80.png in Resources */ = {isa = PBXBuildFile; fileRef = CDB134811926FC51007E2DE0 /* Icon-80X80.png */; };
+		CDB134861927006F007E2DE0 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = CDB134851927006F007E2DE0 /* Default.png */; };
+		CDB1348A192700B6007E2DE0 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CDB13489192700B6007E2DE0 /* Default@2x.png */; };
+		CDB1348C1927026F007E2DE0 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CDB1348B1927026F007E2DE0 /* Default-568h@2x.png */; };
 		D50A3ED71675E4FC0097AC4E /* mainbackground.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D50A3ED61675E4FC0097AC4E /* mainbackground.jpg */; };
 		D50A77B616AFC2CB00717F2C /* libUMFeedback.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D50A77B316AFC2CB00717F2C /* libUMFeedback.a */; };
 		D50A77B716AFC2CB00717F2C /* umFeedback.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D50A77B416AFC2CB00717F2C /* umFeedback.bundle */; };
@@ -78,8 +85,6 @@
 		D5C950E816B62E48008DA550 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5C950E716B62E48008DA550 /* CoreTelephony.framework */; };
 		D5C950EA16B62E54008DA550 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5C950E916B62E54008DA550 /* SystemConfiguration.framework */; };
 		D5C950EC16B62E5C008DA550 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5C950EB16B62E5C008DA550 /* ImageIO.framework */; };
-		D5C950EF16B64A23008DA550 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D5C950ED16B64A23008DA550 /* Default-568h@2x.png */; };
-		D5C950F016B64A23008DA550 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = D5C950EE16B64A23008DA550 /* Default.png */; };
 		D5F9955D169C1E5400B984B8 /* ico_small.png in Resources */ = {isa = PBXBuildFile; fileRef = D5F9955C169C1E5400B984B8 /* ico_small.png */; };
 		D5F9955F169C1EAF00B984B8 /* ico_big.png in Resources */ = {isa = PBXBuildFile; fileRef = D5F9955E169C1EAF00B984B8 /* ico_big.png */; };
 /* End PBXBuildFile section */
@@ -95,6 +100,13 @@
 		8FF9B87813D0F1B900D1F44D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8FF9B87E13D0F1B900D1F44D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
 		CDAC82C519222CB900AF64A5 /* aboutUs_ico.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = aboutUs_ico.png; sourceTree = "<group>"; };
+		CDB1347D1926FAF8007E2DE0 /* Icon-120X120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-120X120.png"; sourceTree = "<group>"; };
+		CDB1347F1926FC51007E2DE0 /* Icon-29X29.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-29X29.png"; sourceTree = "<group>"; };
+		CDB134801926FC51007E2DE0 /* Icon-58X58.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-58X58.png"; sourceTree = "<group>"; };
+		CDB134811926FC51007E2DE0 /* Icon-80X80.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-80X80.png"; sourceTree = "<group>"; };
+		CDB134851927006F007E2DE0 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		CDB13489192700B6007E2DE0 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		CDB1348B1927026F007E2DE0 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		D50A3ED61675E4FC0097AC4E /* mainbackground.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = mainbackground.jpg; sourceTree = "<group>"; };
 		D50A77B316AFC2CB00717F2C /* libUMFeedback.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libUMFeedback.a; sourceTree = "<group>"; };
 		D50A77B416AFC2CB00717F2C /* umFeedback.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = umFeedback.bundle; sourceTree = "<group>"; };
@@ -186,8 +198,6 @@
 		D5C950E716B62E48008DA550 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		D5C950E916B62E54008DA550 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		D5C950EB16B62E5C008DA550 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
-		D5C950ED16B64A23008DA550 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		D5C950EE16B64A23008DA550 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		D5F98EB016BF912300969FEE /* yongshiyiji.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = yongshiyiji.h; sourceTree = "<group>"; };
 		D5F9955C169C1E5400B984B8 /* ico_small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ico_small.png; sourceTree = "<group>"; };
 		D5F9955E169C1EAF00B984B8 /* ico_big.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ico_big.png; sourceTree = "<group>"; };
@@ -219,8 +229,13 @@
 		8FF9B85C13D0F1B900D1F44D = {
 			isa = PBXGroup;
 			children = (
-				D5C950ED16B64A23008DA550 /* Default-568h@2x.png */,
-				D5C950EE16B64A23008DA550 /* Default.png */,
+				CDB1348B1927026F007E2DE0 /* Default-568h@2x.png */,
+				CDB13489192700B6007E2DE0 /* Default@2x.png */,
+				CDB134851927006F007E2DE0 /* Default.png */,
+				CDB1347F1926FC51007E2DE0 /* Icon-29X29.png */,
+				CDB134801926FC51007E2DE0 /* Icon-58X58.png */,
+				CDB134811926FC51007E2DE0 /* Icon-80X80.png */,
+				CDB1347D1926FAF8007E2DE0 /* Icon-120X120.png */,
 				D5F9955E169C1EAF00B984B8 /* ico_big.png */,
 				D5F9955C169C1E5400B984B8 /* ico_small.png */,
 				D5330A05165F14DA009C582A /* Cal.h */,
@@ -505,6 +520,7 @@
 				D50A3ED71675E4FC0097AC4E /* mainbackground.jpg in Resources */,
 				D5955FC11676EED1002D85B7 /* yearbackground.png in Resources */,
 				D5BDB6141677311E00965726 /* showview.png in Resources */,
+				CDB1348A192700B6007E2DE0 /* Default@2x.png in Resources */,
 				CDAC82C619222CB900AF64A5 /* aboutUs_ico.png in Resources */,
 				D59F578C1693E645007CCD90 /* SidebarViewController.xib in Resources */,
 				D5C3A3C016995E55000BB607 /* setupbutton.png in Resources */,
@@ -512,11 +528,14 @@
 				D5F9955D169C1E5400B984B8 /* ico_small.png in Resources */,
 				D5F9955F169C1EAF00B984B8 /* ico_big.png in Resources */,
 				D5A1FA29169E4E1300E75594 /* SetupView.xib in Resources */,
+				CDB134831926FC51007E2DE0 /* Icon-58X58.png in Resources */,
 				D5A1FA2C169E4EA900E75594 /* ToDoViewController.xib in Resources */,
 				D5A1FA32169E6FC100E75594 /* todotablecellbg.png in Resources */,
+				CDB1348C1927026F007E2DE0 /* Default-568h@2x.png in Resources */,
 				D5A1FA36169E7ABE00E75594 /* todocheckbox_normal.png in Resources */,
 				D5A1FA37169E7ABE00E75594 /* todocheckbox_select.png in Resources */,
 				D5A1FA4A169EC33900E75594 /* kongbai.png in Resources */,
+				CDB134861927006F007E2DE0 /* Default.png in Resources */,
 				D555A0F616A005440080ACC1 /* todobackground_iphone5.png in Resources */,
 				D555A0F916A0054D0080ACC1 /* todoaddbutton.png in Resources */,
 				D555A0FA16A0054D0080ACC1 /* todobackground_iphone4.png in Resources */,
@@ -525,9 +544,11 @@
 				D55DDD8B16AA74F000E904AF /* FinishViewController.xib in Resources */,
 				D55DDDBA16AA9A8B00E904AF /* custom-button-normal.png in Resources */,
 				D55DDDBB16AA9A8B00E904AF /* custom-button-normal@2x.png in Resources */,
+				CDB134821926FC51007E2DE0 /* Icon-29X29.png in Resources */,
 				D55DDDBC16AA9A8B00E904AF /* custom-cancel-normal.png in Resources */,
 				D55DDDBD16AA9A8B00E904AF /* custom-cancel-normal@2x.png in Resources */,
 				D55DDDBE16AA9A8B00E904AF /* custom-dialog-background.png in Resources */,
+				CDB1347E1926FAF8007E2DE0 /* Icon-120X120.png in Resources */,
 				D55DDDBF16AA9A8B00E904AF /* custom-dialog-background@2x.png in Resources */,
 				D50A77B716AFC2CB00717F2C /* umFeedback.bundle in Resources */,
 				D50A77C416AFE9DE00717F2C /* todosanjiao.png in Resources */,
@@ -538,8 +559,7 @@
 				D543073216B282A5004A9302 /* holiday.png in Resources */,
 				D5C950D016B61DBB008DA550 /* AboutViewController.xib in Resources */,
 				D5C950E516B62DAB008DA550 /* GuomobAdSDKBundle.bundle in Resources */,
-				D5C950EF16B64A23008DA550 /* Default-568h@2x.png in Resources */,
-				D5C950F016B64A23008DA550 /* Default.png in Resources */,
+				CDB134841926FC51007E2DE0 /* Icon-80X80.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

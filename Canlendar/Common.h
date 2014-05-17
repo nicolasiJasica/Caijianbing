@@ -14,7 +14,7 @@
  91 
  tongbutui
  */
-#define KChannelId @"tongbutui"
+#define KChannelId @"App Store"
 
 //广告
 #define KGuoMengAdvertising  1
@@ -55,7 +55,7 @@
  
 
 
-#define DEBUG_ 1
+#define DEBUG_ 0
 #if DEBUG_
 #undef NSLog
 #define NSLog(...) NSLog(__VA_ARGS__)
