@@ -7,7 +7,7 @@
 //
 
 #import "UITextViewCell.h"
- 
+
 
 @implementation UITextViewCell
 @synthesize textView = m_textView;
@@ -23,21 +23,21 @@
 {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
- 
+        
         m_defaultText = @"事件";
         m_textView = [[[UITextView alloc] init] autorelease];
         [m_textView setTextColor:[UIColor blackColor]];
         [m_textView setFont:[UIFont systemFontOfSize:14.0f]];
         [m_textView setBackgroundColor:[UIColor clearColor]];
         m_textView.keyboardType = UIKeyboardTypeDefault;
-//        m_textView.returnKeyType = UIReturnKeyDone;
+        //        m_textView.returnKeyType = UIReturnKeyDone;
         
         m_textView.scrollEnabled = YES;
         m_textView.editable = YES;
-//        m_textView.autoresizingMask = UIViewAutoresizingFlexibleHeight;//自适应高度
+        //        m_textView.autoresizingMask = UIViewAutoresizingFlexibleHeight;//自适应高度
         m_textView.delegate = self;
         [self addSubview:m_textView];
- 
+        
         //在弹出的键盘上面加一个view来放置退出键盘的Done按钮
         UIToolbar * topView = [[UIToolbar alloc] initWithFrame:CGRectMake(0, 0, 320, 30)];
         [topView setBarStyle:UIBarStyleDefault];
@@ -47,9 +47,9 @@
         [btnSpace release];
         [doneButton release];
         [topView setItems:buttonsArray];
-        [m_textView setInputAccessoryView:topView];  
+        [m_textView setInputAccessoryView:topView];
         [topView release];
- 
+        
     }
     return self;
 }
@@ -66,20 +66,24 @@
 }
 
 - (void)textViewDidBeginEditing:(UITextView *)textView{
- 
-    if ([self.textContent isEqualToString:@""] || self.textContent == nil) {
+    NSLog(@"%@ \n",self.textContent);
+    if (self.textContent == nil || [self.textContent isEqualToString:@""]) {
         self.textView.text = nil;
     }
     self.textView.textColor = [UIColor blackColor];
 }
 - (void)textViewDidEndEditing:(UITextView *)textView{
-    if ([self.textContent isEqualToString:@""] || self.textContent == nil) {
-//        self.textView.text = m_defaultText;
+    if (m_textContent == nil  ||  [m_textContent isEqualToString:@""]) {
+        //        self.textView.text = m_defaultText;
         self.textView.textColor = [UIColor lightGrayColor];
     }
- 
+    else
+    {
+        self.textContent = self.textView.text;
+    }
+    
 }
- 
+
 ////UITextView 消除键盘的方法
 ////返回键点击之后，会在字符串后添加换行符，因此通过检查换行符来判断是否点击了返回键
 //- (BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text
@@ -89,7 +93,7 @@
 //        [textView resignFirstResponder];
 //        return NO;
 //    }
-//    
+//
 //    return YES;
 //}
 
@@ -105,12 +109,12 @@
     if ([self.textContent isEqualToString:@""] || self.textContent == nil) {
         self.textView.textColor = [UIColor lightGrayColor];
         [m_textView setText:m_defaultText];
-
+        
     }
     else
     {
         self.textView.textColor = [UIColor blackColor];
-        [m_textView setText:m_textContent];
+        [m_textView setText:self.textContent];
     }
     [m_textView setFrame:CGRectMake(0, 0, 275, 100)];
     

@@ -47,20 +47,20 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
- 
+    
     if (iPhone5) {
         imageView.image = [UIImage imageNamed:@"todobackground_iphone5.png"];
     }
     else
         imageView.image = [UIImage imageNamed:@"todobackground_iphone4.png"];
- 
+    
     //btn2.layer.borderColor = [UIColor grayColor].CGColor;
     UIButton* cancelButton = [[[UIButton alloc] initWithFrame:CGRectMake(10, 5+ (MY_IOS_VERSION_7 ? 10 : 0), 49, 29)] autorelease];
-//    cancelButton.adjustsImageWhenHighlighted = NO;
-//    cancelButton.layer. = 10.0;
-//    /* 下面的这个属性设置为yes的状态下，按钮按下会发光*/
+    //    cancelButton.adjustsImageWhenHighlighted = NO;
+    //    cancelButton.layer. = 10.0;
+    //    /* 下面的这个属性设置为yes的状态下，按钮按下会发光*/
     cancelButton.showsTouchWhenHighlighted = YES;
- 
+    
     [cancelButton setBackgroundImage:[UIImage imageNamed:@"todocancelbutton.png"] forState:UIControlStateNormal];
     
     [cancelButton addTarget:self action:@selector(cancelButtonPress) forControlEvents:UIControlEventTouchUpInside];
@@ -70,14 +70,14 @@
     [finishButton setBackgroundImage:[UIImage imageNamed:@"todofinishbutton.png"] forState:UIControlStateNormal];
     [finishButton addTarget:self action:@selector(finishButtonPress) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:finishButton];
- 
+    
     m_CellCount = 3;
     NSInteger heightIndex = 105;
- 
+    
     
     NSString* ToDoType = (m_finishType == FINISH ? KToDo_finishEvent : KToDo_unfinishEvent);
     NSMutableArray* userarray = (NSMutableArray*)[[NSUserDefaults standardUserDefaults] objectForKey:ToDoType];
- 
+    
     self.title_ = @"";
     self.isAdvice = NO;
     self.adviceDate = nil;
@@ -88,19 +88,19 @@
             self.adviceDate = [NSDate dateWithTimeInterval:0 sinceDate:(NSDate*)[[userarray objectAtIndex:m_addIndex] objectForKey:KToDo_NoticeTime]];
         }
     }
- 
+    
     m_tableView = [[UITableView alloc] initWithFrame:CGRectMake(15, heightIndex, 290, 395  - 4 * 45 + 80 + (MY_IOS_VERSION_7 ? 20 : 0)) style:UITableViewStylePlain];
     m_tableView.delegate = self;
     m_tableView.dataSource = self;
- 
+    
     m_tableView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"kongbai.png"]];
     //如果不希望响应select，那么就可以用下面的代码设置属性：
-//    放在cellselect 内部控制
-//    if (self.finishType == FINISH) {
-//        m_tableView.allowsSelection=NO;//已完成事件只可以查看
-//    }
-//    else
-//        m_tableView.allowsSelection = YES;
+    //    放在cellselect 内部控制
+    //    if (self.finishType == FINISH) {
+    //        m_tableView.allowsSelection=NO;//已完成事件只可以查看
+    //    }
+    //    else
+    //        m_tableView.allowsSelection = YES;
     //    m_tableView.allowsSelection=NO;
     m_tableView.contentSize = CGSizeMake(290, (iPhone5 ? 500 : 200));
     [self.view addSubview:m_tableView];
@@ -125,11 +125,11 @@
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-  
+    
 }
 -(void) cancelButtonPress
 {
- 
+    
     [self dismissModalViewControllerAnimated:YES];
     [super viewWillAppear:YES];
 }
@@ -140,7 +140,7 @@
     NSMutableArray* array = (NSMutableArray*)[[NSUserDefaults standardUserDefaults] objectForKey:ToDoType];
     NSMutableArray* finishEventArrayCopy = [[[NSMutableArray alloc] initWithArray:array] autorelease];
     NSMutableDictionary* dic = [[[NSMutableDictionary alloc] init] autorelease];
-
+    
     UITextViewCell* cell = (UITextViewCell*)[m_tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]];
     if (cell) {
         if ([[cell getTextView] isEqualToString:@""]) {
@@ -184,7 +184,7 @@
     }
     else
         [dic setValue:@"false" forKey:KToDo_Notice];
-
+    
     if (m_type == MODIFY) {
         if ([finishEventArrayCopy count] > m_addIndex) {
             [finishEventArrayCopy replaceObjectAtIndex:m_addIndex withObject:dic];
@@ -194,17 +194,17 @@
     {
         [finishEventArrayCopy addObject:dic];
     }
- 
+    
     [[NSUserDefaults standardUserDefaults] setObject:finishEventArrayCopy forKey:ToDoType];
     [[NSUserDefaults standardUserDefaults] synchronize];//tongbu
- 
+    
     //数据存储之后   设置 闹钟提醒
     NSLog(@"dic: %@",dic);
     if (self.isAdvice) {
         CanlendarAppDelegate *m_delegate = (CanlendarAppDelegate*)[[UIApplication sharedApplication] delegate];
         [m_delegate schedulNotificationWithYear:self.adviceDate andMsg:([dic objectForKey:KToDo_Title] == nil ? @"提醒" : [dic objectForKey:KToDo_Title])];
     }
- 
+    
     [self dismissModalViewControllerAnimated:YES];
     [super viewWillAppear:YES];
 }
@@ -226,20 +226,20 @@
 //绘制cell
 - (UITableViewCell *) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
- 
+    
     if (indexPath.row == 0) {
         static NSString *groupCell = @"groupCell0";
         UITextViewCell* cell = (UITextViewCell*)[tableView dequeueReusableCellWithIdentifier:groupCell];
         if (cell == nil)
         {
             cell = [[[UITextViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:groupCell] autorelease];
+            cell.textContent = self.title_;
         }
         if (self.finishType == FINISH) {
             cell.noEditable = YES;
         }
         else
             cell.noEditable = NO;
-        cell.textContent = self.title_;
         
         [cell refreshCell];
         return cell;
@@ -267,7 +267,7 @@
         
         [cell refreshCell];
         return cell;
-    
+        
     }
     else
     {
@@ -317,7 +317,7 @@
             addView.currentSelectDate = self.adviceDate;
         }
         [self presentModalViewController:addView animated:YES];
-  
+        
     }
     if (indexPath.row == 2) {
         //删除事件
@@ -345,7 +345,7 @@
 -(void) MODIFYADVICE_NOTIFICATION:(NSNotification*)notification
 {
     NSDictionary* dict = (NSDictionary*)(notification.object);
-
+    
     BOOL isAdvice = NO;
     if ([dict objectForKey:@"YES"] != nil) {
         isAdvice = YES;
@@ -360,7 +360,7 @@
         self.adviceDate = nil;
     }
     [m_tableView reloadData];
- 
+    
 }
 //删除
 -(void) ALERTVIEW_NOTIFACTION_OK:(NSNotification*)notification
@@ -368,7 +368,7 @@
     NSString* ToDoType = (m_finishType == FINISH ? KToDo_finishEvent : KToDo_unfinishEvent);
     NSArray* array = (NSArray*)[[NSUserDefaults standardUserDefaults] objectForKey:ToDoType];
     NSMutableArray* EventArrayCopy = [[[NSMutableArray alloc] initWithArray:array] autorelease];
- 
+    
     if (m_type == MODIFY) {
         if ([EventArrayCopy count] > m_addIndex) {
             [EventArrayCopy removeObjectAtIndex:m_addIndex];

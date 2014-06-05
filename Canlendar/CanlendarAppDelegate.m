@@ -11,7 +11,7 @@
 #import "SidebarViewController.h"
 #import "MobClick.h"
 #import "StartViewController.h"
-#import "UMFeedback.h" 
+#import "UMFeedback.h"
 #import "ToDoViewController.h"
 @interface CanlendarAppDelegate()
 -(void) UMengConfigCallBack:(id)sender;
@@ -29,11 +29,11 @@
      */
     [MobClick setCrashReportEnabled:YES]; // 如果不需要捕捉异常，注释掉此行
     [MobClick startWithAppkey:KUMengAppkey reportPolicy:REALTIME channelId:KChannelId];
-
+    
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(onlineConfigCallBack:) name:UMOnlineConfigDidFinishedNotification object:nil];
     //使用在线参数功能，可以让你动态修改应用中的参数值
     [MobClick updateOnlineConfig];
- 
+    
 }
 //格言警句
 -(NSString*) get_UMeng_geyanjingju
@@ -45,17 +45,17 @@
     else
         return KUMeng_geyanjingju;
 }
- 
+
 //在线参数 监听事件
 - (void)onlineConfigCallBack:(NSNotification *)notification {
     NSLog(@"online config has fininshed and params = %@", notification.userInfo);
     
     m_geyanjingju = [notification.userInfo objectForKey:KUMeng_geyanjingjuKey];
- 
-//    NSTimer* myTimer = [NSTimer scheduledTimerWithTimeInterval:1.5 target:self selector:@selector(UMengConfigCallBack:) userInfo:nil repeats:NO];
-//    [myTimer setFireDate:[NSDate distantPast]];
     
-//    [self setupTimer];
+    //    NSTimer* myTimer = [NSTimer scheduledTimerWithTimeInterval:1.5 target:self selector:@selector(UMengConfigCallBack:) userInfo:nil repeats:NO];
+    //    [myTimer setFireDate:[NSDate distantPast]];
+    
+    //    [self setupTimer];
 }
 
 -(void) UMengConfigCallBack:(id)sender
@@ -72,13 +72,18 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     [self UMeng];
+    
+    SidebarViewController* todo = [[SidebarViewController alloc] initWithNibName:@"SidebarViewController" bundle:nil];
+    [self.window setRootViewController:todo];
+    [self.window makeKeyAndVisible];
+    
     m_startViewController = [[StartViewController alloc] init];
     [self showStartView];
- 
+    
     //检查 留言反馈
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(umCheck:) name:UMFBCheckFinishedNotification object:nil];
     [UMFeedback checkWithAppkey:KUMengAppkey];
-
+    
     return YES;
 }
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
@@ -111,9 +116,9 @@
         [alertView release];
         
     }else{
-//        alertView = [[UIAlertView alloc] initWithTitle:@"没有新回复" message:nil delegate:nil cancelButtonTitle:@"取消" otherButtonTitles:nil];
+        //        alertView = [[UIAlertView alloc] initWithTitle:@"没有新回复" message:nil delegate:nil cancelButtonTitle:@"取消" otherButtonTitles:nil];
     }
-
+    
 }
 
 //设置的时间到了以后  如果此时你的客户端 软件仍在打开，则会调用？？？
@@ -141,7 +146,7 @@
 - (void)applicationDidEnterBackground:(UIApplication *)application
 {
     /*
-     Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later. 
+     Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
      If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
      */
 }
@@ -162,7 +167,7 @@
     /*
      Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
      */
- 
+    
     //它是类里自带的方法,这个方法得说下，很多人都不知道有什么用，它一般在整个应用程序加载时执行，挂起进入后也会执行，所以很多时候都会使用到，将小红圈清空
     [UIApplication sharedApplication].applicationIconBadgeNumber = 0;
 }
@@ -180,34 +185,33 @@
 {
     [_window release];
     [_viewController release];
- 
+    
     if(iPhone5)
     {
         [[NSNotificationCenter defaultCenter] removeObserver:self forKeyPath:UMOnlineConfigDidFinishedNotification];
     }
-
+    
     [super dealloc];
 }
 
 - (void)showStartView
 {
- 
+    
     [self.window addSubview:m_startViewController.view];
     m_startViewController.view.hidden = NO;
- 
-    [self.window makeKeyAndVisible];
 }
 
 -(void) showLoading:(id)sender
 {
-    self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
-    self.viewController = [[[SidebarViewController alloc] initWithNibName:@"SidebarViewController" bundle:nil] autorelease];
-    self.window.rootViewController = self.viewController;
- 
-    [self.window makeKeyAndVisible];
-
+    m_startViewController.view.hidden = YES;
+    //    self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
+    //    self.viewController = [[SidebarViewController alloc] initWithNibName:nil bundle:nil];
+    //    self.window.rootViewController = self.viewController;
+    //    [self.window addSubview:self.viewController.view];       //加入这样一句代码，我就是这样解决的
+    //    [self.window makeKeyAndVisible];
+    
 }
- 
+
 /////////////////////////////////////////////////////////////
 -(NSString*) getTime_byNSdate:(NSDate*)date
 {
@@ -225,7 +229,7 @@
     int day = [comps day];
     int hour = [comps hour];
     int min = [comps minute];
- 
+    
     //a就是星期几，1代表星期日，2代表星期一，后面依次
     NSString* weekStr = @"";
     switch (week) {
@@ -275,22 +279,22 @@
 
 
 -(void)schedulNotificationWithYear:(NSDate*)setDate andMsg:(NSString *)msg{
- 
-//    // Set up the fire time 
-//    NSCalendar *calendar = [NSCalendar autoupdatingCurrentCalendar];  
-//    NSDateComponents *dateComps = [[NSDateComponents alloc] init];
-//    [dateComps setDay:d];  
-//    [dateComps setMonth:m];
-//    [dateComps setYear:y];
-//    [dateComps setHour:h]; 
-//    [dateComps setMinute:mi];
-//    [dateComps setSecond:0]; 
-//    NSDate *itemDate = [calendar dateFromComponents:dateComps];
-//    [dateComps release];
-  
+    
+    //    // Set up the fire time
+    //    NSCalendar *calendar = [NSCalendar autoupdatingCurrentCalendar];
+    //    NSDateComponents *dateComps = [[NSDateComponents alloc] init];
+    //    [dateComps setDay:d];
+    //    [dateComps setMonth:m];
+    //    [dateComps setYear:y];
+    //    [dateComps setHour:h];
+    //    [dateComps setMinute:mi];
+    //    [dateComps setSecond:0];
+    //    NSDate *itemDate = [calendar dateFromComponents:dateComps];
+    //    [dateComps release];
+    
     //删除本地消息
     [self cancelLocalNotification];
- 
+    
     NSArray* array = (NSArray*)[[NSUserDefaults standardUserDefaults] objectForKey:KToDo_unfinishEvent];
     for (int j = 0; j < [array count]; j++) {
         
@@ -325,7 +329,7 @@
             [[UIApplication sharedApplication] scheduleLocalNotification:localNotif];
         }
     }
- 
+    
 }
 //删除所有本地通知
 -(void) cancelLocalNotification
