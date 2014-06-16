@@ -13,6 +13,11 @@
 		8FF9B87613D0F1B900D1F44D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8FF9B87413D0F1B900D1F44D /* InfoPlist.strings */; };
 		8FF9B87913D0F1B900D1F44D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FF9B87813D0F1B900D1F44D /* main.m */; };
 		8FF9B87F13D0F1B900D1F44D /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FF9B87D13D0F1B900D1F44D /* MainWindow.xib */; };
+		CD605636194EF8F300F2961A /* libMobClickLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CD605635194EF8F300F2961A /* libMobClickLibrary.a */; };
+		CD60563A194EF9F900F2961A /* libUMFeedback.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CD605637194EF9F900F2961A /* libUMFeedback.a */; };
+		CD60563B194EF9F900F2961A /* umFeedback.bundle in Resources */ = {isa = PBXBuildFile; fileRef = CD605638194EF9F900F2961A /* umFeedback.bundle */; };
+		CD605644194F008400F2961A /* GuomobAdSDKBundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = CD605642194F008400F2961A /* GuomobAdSDKBundle.bundle */; };
+		CD605645194F008400F2961A /* libGuomobAdSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CD605643194F008400F2961A /* libGuomobAdSDK.a */; };
 		CDAC82C619222CB900AF64A5 /* aboutUs_ico.png in Resources */ = {isa = PBXBuildFile; fileRef = CDAC82C519222CB900AF64A5 /* aboutUs_ico.png */; };
 		CDB1347E1926FAF8007E2DE0 /* Icon-120X120.png in Resources */ = {isa = PBXBuildFile; fileRef = CDB1347D1926FAF8007E2DE0 /* Icon-120X120.png */; };
 		CDB134821926FC51007E2DE0 /* Icon-29X29.png in Resources */ = {isa = PBXBuildFile; fileRef = CDB1347F1926FC51007E2DE0 /* Icon-29X29.png */; };
@@ -22,10 +27,7 @@
 		CDB1348A192700B6007E2DE0 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CDB13489192700B6007E2DE0 /* Default@2x.png */; };
 		CDB1348C1927026F007E2DE0 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CDB1348B1927026F007E2DE0 /* Default-568h@2x.png */; };
 		D50A3ED71675E4FC0097AC4E /* mainbackground.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D50A3ED61675E4FC0097AC4E /* mainbackground.jpg */; };
-		D50A77B616AFC2CB00717F2C /* libUMFeedback.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D50A77B316AFC2CB00717F2C /* libUMFeedback.a */; };
-		D50A77B716AFC2CB00717F2C /* umFeedback.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D50A77B416AFC2CB00717F2C /* umFeedback.bundle */; };
 		D50A77C416AFE9DE00717F2C /* todosanjiao.png in Resources */ = {isa = PBXBuildFile; fileRef = D50A77C316AFE9DE00717F2C /* todosanjiao.png */; };
-		D50F7014169BF31900E3C72C /* libMobClickLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D50F7012169BF31900E3C72C /* libMobClickLibrary.a */; };
 		D51035EB16A5243F00CF086E /* FinishViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D51035EA16A5243E00CF086E /* FinishViewController.m */; };
 		D51035F016A53C9600CF086E /* AddEventViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D51035EF16A53C9500CF086E /* AddEventViewController.xib */; };
 		D51418B21697C2DE00AC69F4 /* SidebarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D51418B11697C2DE00AC69F4 /* SidebarViewController.m */; };
@@ -80,8 +82,6 @@
 		D5C3A3C016995E55000BB607 /* setupbutton.png in Resources */ = {isa = PBXBuildFile; fileRef = D5C3A3BF16995E55000BB607 /* setupbutton.png */; };
 		D5C950D016B61DBB008DA550 /* AboutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D5C950CF16B61DBB008DA550 /* AboutViewController.xib */; };
 		D5C950D616B621AA008DA550 /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D5C950D516B621AA008DA550 /* AboutViewController.m */; };
-		D5C950E516B62DAB008DA550 /* GuomobAdSDKBundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D5C950E316B62DAB008DA550 /* GuomobAdSDKBundle.bundle */; };
-		D5C950E616B62DAB008DA550 /* libGuomobAdSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D5C950E416B62DAB008DA550 /* libGuomobAdSDK.a */; };
 		D5C950E816B62E48008DA550 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5C950E716B62E48008DA550 /* CoreTelephony.framework */; };
 		D5C950EA16B62E54008DA550 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5C950E916B62E54008DA550 /* SystemConfiguration.framework */; };
 		D5C950EC16B62E5C008DA550 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5C950EB16B62E5C008DA550 /* ImageIO.framework */; };
@@ -99,6 +99,14 @@
 		8FF9B87713D0F1B900D1F44D /* Canlendar-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Canlendar-Prefix.pch"; sourceTree = "<group>"; };
 		8FF9B87813D0F1B900D1F44D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8FF9B87E13D0F1B900D1F44D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
+		CD605633194EF81000F2961A /* MobClick.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MobClick.h; sourceTree = "<group>"; };
+		CD605635194EF8F300F2961A /* libMobClickLibrary.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libMobClickLibrary.a; sourceTree = "<group>"; };
+		CD605637194EF9F900F2961A /* libUMFeedback.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libUMFeedback.a; sourceTree = "<group>"; };
+		CD605638194EF9F900F2961A /* umFeedback.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = umFeedback.bundle; sourceTree = "<group>"; };
+		CD605639194EF9F900F2961A /* UMFeedback.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UMFeedback.h; sourceTree = "<group>"; };
+		CD605641194F008400F2961A /* GuomobAdSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GuomobAdSDK.h; sourceTree = "<group>"; };
+		CD605642194F008400F2961A /* GuomobAdSDKBundle.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = GuomobAdSDKBundle.bundle; sourceTree = "<group>"; };
+		CD605643194F008400F2961A /* libGuomobAdSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libGuomobAdSDK.a; sourceTree = "<group>"; };
 		CDAC82C519222CB900AF64A5 /* aboutUs_ico.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = aboutUs_ico.png; sourceTree = "<group>"; };
 		CDB1347D1926FAF8007E2DE0 /* Icon-120X120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-120X120.png"; sourceTree = "<group>"; };
 		CDB1347F1926FC51007E2DE0 /* Icon-29X29.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-29X29.png"; sourceTree = "<group>"; };
@@ -108,12 +116,7 @@
 		CDB13489192700B6007E2DE0 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		CDB1348B1927026F007E2DE0 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		D50A3ED61675E4FC0097AC4E /* mainbackground.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = mainbackground.jpg; sourceTree = "<group>"; };
-		D50A77B316AFC2CB00717F2C /* libUMFeedback.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libUMFeedback.a; sourceTree = "<group>"; };
-		D50A77B416AFC2CB00717F2C /* umFeedback.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = umFeedback.bundle; sourceTree = "<group>"; };
-		D50A77B516AFC2CB00717F2C /* UMFeedback.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UMFeedback.h; sourceTree = "<group>"; };
 		D50A77C316AFE9DE00717F2C /* todosanjiao.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = todosanjiao.png; sourceTree = "<group>"; };
-		D50F7012169BF31900E3C72C /* libMobClickLibrary.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libMobClickLibrary.a; sourceTree = "<group>"; };
-		D50F7013169BF31900E3C72C /* MobClick.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MobClick.h; sourceTree = "<group>"; };
 		D51035E916A5243E00CF086E /* FinishViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FinishViewController.h; sourceTree = "<group>"; };
 		D51035EA16A5243E00CF086E /* FinishViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FinishViewController.m; sourceTree = "<group>"; };
 		D51035EF16A53C9500CF086E /* AddEventViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddEventViewController.xib; sourceTree = "<group>"; };
@@ -192,9 +195,6 @@
 		D5C950CF16B61DBB008DA550 /* AboutViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AboutViewController.xib; sourceTree = "<group>"; };
 		D5C950D416B621AA008DA550 /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
 		D5C950D516B621AA008DA550 /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
-		D5C950E216B62DAB008DA550 /* GuomobAdSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GuomobAdSDK.h; sourceTree = "<group>"; };
-		D5C950E316B62DAB008DA550 /* GuomobAdSDKBundle.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = GuomobAdSDKBundle.bundle; sourceTree = "<group>"; };
-		D5C950E416B62DAB008DA550 /* libGuomobAdSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libGuomobAdSDK.a; sourceTree = "<group>"; };
 		D5C950E716B62E48008DA550 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		D5C950E916B62E54008DA550 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		D5C950EB16B62E5C008DA550 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
@@ -208,18 +208,18 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD60563A194EF9F900F2961A /* libUMFeedback.a in Frameworks */,
 				D5C950EC16B62E5C008DA550 /* ImageIO.framework in Frameworks */,
 				D5C950EA16B62E54008DA550 /* SystemConfiguration.framework in Frameworks */,
 				D5C950E816B62E48008DA550 /* CoreTelephony.framework in Frameworks */,
+				CD605636194EF8F300F2961A /* libMobClickLibrary.a in Frameworks */,
 				D55DDDA816AA963100E904AF /* QuartzCore.framework in Frameworks */,
+				CD605645194F008400F2961A /* libGuomobAdSDK.a in Frameworks */,
 				D53D14611699778500D47197 /* libz.dylib in Frameworks */,
 				D51418B81697DB8200AC69F4 /* MessageUI.framework in Frameworks */,
 				8FF9B86C13D0F1B900D1F44D /* UIKit.framework in Frameworks */,
 				8FF9B86E13D0F1B900D1F44D /* Foundation.framework in Frameworks */,
 				8FF9B87013D0F1B900D1F44D /* CoreGraphics.framework in Frameworks */,
-				D50F7014169BF31900E3C72C /* libMobClickLibrary.a in Frameworks */,
-				D50A77B616AFC2CB00717F2C /* libUMFeedback.a in Frameworks */,
-				D5C950E616B62DAB008DA550 /* libGuomobAdSDK.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -306,9 +306,9 @@
 		D50A77AD16AFBFAC00717F2C /* FeedBack */ = {
 			isa = PBXGroup;
 			children = (
-				D50A77B516AFC2CB00717F2C /* UMFeedback.h */,
-				D50A77B316AFC2CB00717F2C /* libUMFeedback.a */,
-				D50A77B416AFC2CB00717F2C /* umFeedback.bundle */,
+				CD605637194EF9F900F2961A /* libUMFeedback.a */,
+				CD605638194EF9F900F2961A /* umFeedback.bundle */,
+				CD605639194EF9F900F2961A /* UMFeedback.h */,
 			);
 			path = FeedBack;
 			sourceTree = "<group>";
@@ -330,9 +330,9 @@
 		D53D14561699733100D47197 /* UMeng */ = {
 			isa = PBXGroup;
 			children = (
+				CD605635194EF8F300F2961A /* libMobClickLibrary.a */,
+				CD605633194EF81000F2961A /* MobClick.h */,
 				D50A77AD16AFBFAC00717F2C /* FeedBack */,
-				D50F7012169BF31900E3C72C /* libMobClickLibrary.a */,
-				D50F7013169BF31900E3C72C /* MobClick.h */,
 			);
 			path = UMeng;
 			sourceTree = "<group>";
@@ -431,9 +431,9 @@
 		D5C950DB16B62D3D008DA550 /* Guomob */ = {
 			isa = PBXGroup;
 			children = (
-				D5C950E216B62DAB008DA550 /* GuomobAdSDK.h */,
-				D5C950E316B62DAB008DA550 /* GuomobAdSDKBundle.bundle */,
-				D5C950E416B62DAB008DA550 /* libGuomobAdSDK.a */,
+				CD605641194F008400F2961A /* GuomobAdSDK.h */,
+				CD605642194F008400F2961A /* GuomobAdSDKBundle.bundle */,
+				CD605643194F008400F2961A /* libGuomobAdSDK.a */,
 			);
 			path = Guomob;
 			sourceTree = "<group>";
@@ -550,7 +550,6 @@
 				D55DDDBE16AA9A8B00E904AF /* custom-dialog-background.png in Resources */,
 				CDB1347E1926FAF8007E2DE0 /* Icon-120X120.png in Resources */,
 				D55DDDBF16AA9A8B00E904AF /* custom-dialog-background@2x.png in Resources */,
-				D50A77B716AFC2CB00717F2C /* umFeedback.bundle in Resources */,
 				D50A77C416AFE9DE00717F2C /* todosanjiao.png in Resources */,
 				D543072C16B281E2004A9302 /* daybg.png in Resources */,
 				D543072E16B281E2004A9302 /* todocancelbutton.png in Resources */,
@@ -558,7 +557,8 @@
 				D543073016B281E2004A9302 /* workday.png in Resources */,
 				D543073216B282A5004A9302 /* holiday.png in Resources */,
 				D5C950D016B61DBB008DA550 /* AboutViewController.xib in Resources */,
-				D5C950E516B62DAB008DA550 /* GuomobAdSDKBundle.bundle in Resources */,
+				CD60563B194EF9F900F2961A /* umFeedback.bundle in Resources */,
+				CD605644194F008400F2961A /* GuomobAdSDKBundle.bundle in Resources */,
 				CDB134841926FC51007E2DE0 /* Icon-80X80.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
